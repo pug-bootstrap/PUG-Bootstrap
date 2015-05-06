@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JADE-Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">JADE-Bootstrap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="getting-started.html">Getting started</a></li>
+            <li><a href="css.html"> CSS</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li class="active"><a href="#">Customize</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>JADE-Bootstrap</h1>
+      <p>Welcome to JADE-Bootstrap</p>
+      <div role="alert" class="alert alert-info alert-dismissible">
+        <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert
+      </div>
+      <div role="alert" class="alert alert-danger alert-dismissible">
+        <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a danger alert
+      </div>
+      <div role="alert" class="alert alert-success alert-dismissible">
+        <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a success alert
+      </div>
+      <div role="alert" class="alert alert-warning alert-dismissible">
+        <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a warning alert
+      </div><span aria-hidden="true" class="glyphicon glyphicon-search"></span><br>
+      <div class="dropdown">
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">My Dropdown Menu&nbsp;<span class="caret"></span>
+        </button>
+        <ul role="menu" aria-labelledby="dropdownMenu1" class="dropdown-menu">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.getbootstrap.com">Bootstrap</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.jade-lang.com">JADE</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.nodejs.org">NodeJS</a></li>
+        </ul>
+      </div><br>
+      <div class="dropup">
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">My DropUp Menu&nbsp;<span class="caret"></span>
+        </button>
+        <ul role="menu" aria-labelledby="dropupMenu1" class="dropdown-menu">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.getbootstrap.com">Bootstrap</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.jade-lang.com">JADE</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.nodejs.org">NodeJS</a></li>
+        </ul>
+      </div><br>
+      <form>
+        <div class="form-group">
+          <label for="txtName">Name</label>
+          <input type="text" id="txtName" placeholder="Name" class="form-control"/>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"/>Check me out
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio"/>My Radio Button
+          </label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">Register</button>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">$
+            </div>
+            <input type="text" id="txtName" placeholder="Name" class="form-control"/>
+            <div class="input-group-addon">%
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">$
+            </div>
+            <input type="text" id="txtName" placeholder="Name" class="form-control"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" id="txtName" placeholder="Name" class="form-control"/>
+            <div class="input-group-addon">%
+            </div>
+          </div>
+        </div>
+      </form><br>
+      <div class="checkbox-inline">
+        <input type="checkbox"/>1
+      </div>
+      <div class="checkbox-inline">
+        <input type="checkbox"/>2
+      </div>
+      <div class="checkbox-inline">
+        <input type="checkbox"/>3
+      </div><br>
+      <div class="radio-inline">
+        <input type="radio"/>1
+      </div>
+      <div class="radio-inline">
+        <input type="radio"/>2
+      </div>
+      <div class="radio-inline">
+        <input type="radio"/>3
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

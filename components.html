@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -71,16 +72,19 @@
       <div class="highlight">
         <pre><code data-lang="jade" class="language-jade"> +icon("search")</code></pre>
       </div>
-      <div role="alert" class="alert alert-info alert-dismissible">
+      <div role="alert" class="alert alert-dismissible alert-info"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
         <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert
       </div>
-      <div role="alert" class="alert alert-danger alert-dismissible">
+      <div role="alert" class="alert alert-dismissible alert-info"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span>
+        <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert with custom icon
+      </div>
+      <div role="alert" class="alert alert-dismissible alert-danger"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span>
         <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a danger alert
       </div>
-      <div role="alert" class="alert alert-success alert-dismissible">
+      <div role="alert" class="alert alert-dismissible alert-success"><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span>
         <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a success alert
       </div>
-      <div role="alert" class="alert alert-warning alert-dismissible">
+      <div role="alert" class="alert alert-dismissible alert-warning"><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span>
         <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a warning alert
       </div><span aria-hidden="true" class="glyphicon glyphicon-search"></span><br>
       <div class="dropdown">
@@ -160,7 +164,11 @@
       </div>
       <div class="radio-inline">
         <input type="radio"/>3
-      </div>
+      </div><br>
+      <button type="button" aria-label="search" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+      </button>
+      <h2>Labels</h2><span class="label label-default">Default</span><span class="label label-primary">Primary</span><span class="label label-success">Success</span><span class="label label-info">Info</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span>
+      <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

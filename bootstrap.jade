@@ -1,0 +1,313 @@
+//- bootstrap.jade
+//- bootstrap mixins
+
+
+//- Generic alert
+mixin alert(type,message,icon)
+	.alert.alert-dismissible(role="alert",class="alert-#{type}")
+		+icon(icon)
+		button.close(type="button",data-dismiss="alert" aria-label="Close")
+			span(aria-hidden="true")  &times;
+		= message
+	
+//- Alert info
+mixin alert-info(message,icon)
+	unless icon
+		- var icon = "info-sign"
+	+alert("info",message,icon)
+
+	
+//- Alert success
+mixin alert-success(message,icon)
+	unless icon
+		- var icon = "ok-sign"
+	+alert("success",message,icon)
+
+//- Alert warning		
+mixin alert-warning(message,icon)
+	unless icon
+		- var icon = "exclamation-sign"
+	+alert("warning",message,icon)
+
+//- Alert danger		
+mixin alert-danger(message)
+	unless icon
+		- var icon = "remove-sign"
+	+alert("danger",message,icon)
+
+//- Glyphicon
+mixin icon(name)
+	span.glyphicon(class="glyphicon-#{name}",aria-hidden="true")
+	| &nbsp;
+
+//- Dropdown
+mixin dropdown(caption,items)
+	.dropdown
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+			= caption
+			| &nbsp;
+			span.caret
+		ul.dropdown-menu(role="menu",aria-labelledby="dropdownMenu1")
+			- var args = Array.prototype.slice.call(arguments);
+			for item in args[1]
+				li(role="presentation")
+					a(role="menuitem",tabindex="-1",href="#{item.url}")= item.text
+
+//- Dropup
+mixin dropup(caption,items)
+	.dropup
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+			= caption
+			| &nbsp;
+			span.caret
+		ul.dropdown-menu(role="menu",aria-labelledby="dropupMenu1")
+			- var args = Array.prototype.slice.call(arguments);
+			for item in args[1]
+				li(role="presentation")
+					a(role="menuitem",tabindex="-1",href="#{item.url}")= item.text
+
+//- Input control with form-group wrapper
+mixin input(type,id,placeholder,label)
+	.form-group
+		label(for="#{id}") #{label}
+		input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+
+//- Simple form input control without a form-group		
+mixin input-simple(type,id,placeholder,label)
+	input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+
+//- Checkbox - Block style
+mixin checkbox(text)
+	.checkbox
+		label
+			input(type="checkbox")
+			= text
+
+//- Checkbox - Inline style			
+mixin checkbox-inline(text)
+	.checkbox-inline
+		input(type="checkbox")
+		= text
+
+//- Radio box
+mixin radio(text)
+	.radio
+		label
+			input(type="radio")
+			= text
+
+//- Radio box - Inline style
+mixin radio-inline(text)
+	.radio-inline
+		input(type="radio")
+		= text
+
+//- Submit button
+mixin submit(text)
+	.form-group
+		button.btn.btn-default(type="submit")= text
+
+//- Input group - both prepend and append options available, and block is passed
+mixin input-group(prepend,append)
+	.form-group
+		.input-group
+			unless !prepend
+				.input-group-addon
+					= prepend
+			block
+			unless !append
+				.input-group-addon
+					= append
+
+//- Icon button
+mixin icon-btn(icon)
+	button.btn.btn-default(type="button",aria-label="#{icon}")
+		+icon(icon)
+		
+//- Generic label
+mixin label(type,text)
+	span.label(class="label-#{type}")= text
+
+//- Info label
+mixin label-default(text)
+	+label("default",text)
+	
+//- Info label
+mixin label-info(text)
+	+label("info",text)
+
+//- Primary label
+mixin label-primary(text)
+	+label("primary",text)
+	
+//- Success label
+mixin label-success(text)
+	+label("success",text)
+	
+//- Warning label
+mixin label-warning(text)
+	+label("warning",text)
+	
+//- Danger label
+mixin label-danger(text)
+	+label("danger",text)
+	
+//- Badges
+mixin badge(text)
+	span.badge= text
+
+//- Tabs
+mixin tab-list(tabs,active)
+	ul.nav.nav-tabs(role="tablist")
+		each item,index in tabs
+			if (index === active)
+				li.active
+					a(href="#tab#{item}",role="tab",data-toggle="tab")= item
+			else
+				li
+					a(href="#tab#{item}",role="tab",data-toggle="tab")= item
+	.tab-content
+		block
+		
+
+//- Tab pane
+mixin tab(id,active)
+	if(active)
+		.tab-pane.active(id="tab#{id}")
+			block
+	else
+		.tab-pane(id="tab#{id}")
+			block
+
+//- panel
+mixin panel(type,title)
+	.panel(class="panel-#{type}")
+		.panel-heading
+			h3.panel-title= title
+		.panel-body
+			block
+
+//- panel-default
+mixin panel-default(title)
+	+panel("default",title)
+		block
+
+//- panel-primary
+mixin panel-primary(title)
+	+panel("primary",title)
+		block
+		
+//- panel-success
+mixin panel-success(title)
+	+panel("success",title)
+		block
+		
+//- panel-info
+mixin panel-info(title)
+	+panel("info",title)
+		block
+
+//- panel-warning
+mixin panel-warning(title)
+	+panel("warning",title)
+		block
+		
+//- panel-danger
+mixin panel-danger(title)
+	+panel("danger",title)
+		block
+		
+//- modal
+mixin modal(title,id)
+	.modal.fade(id="#{id}",tabindex="-1",role="dialog",aria-labelledby="#{id}Label" aria-hidden="true")
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button",data-dismiss="modal")
+						span(aria-hidden="true") &times;
+						span.sr-only Close
+					h4.modal-title(id="#{id}Label")= title
+				.modal-body
+					block
+				.modal-footer
+					button.btn.btn-default(type="button",data-dismiss="modal") Close
+
+//- tooltip
+mixin tooltip(text,placement)
+	a(href="#",data-toggle="tooltip",data-placement="#{placement}",title="#{text}")
+		block
+
+//- tooltip-left
+mixin tooltip-left(text)
+	+tooltip(text,"left")
+		block
+	
+//- tooltip-right
+mixin tooltip-right(text)
+	+tooltip(text,"right")
+		block
+	
+//- tooltip-top
+mixin tooltip-top(text)
+	+tooltip(text,"top")
+		block
+	
+//- tooltip-bottom
+mixin tooltip-bottom(text)
+	+tooltip(text,"bottom")
+		block
+
+//- accordion
+mixin accordion(id)
+	.panel-group(id="accordion#{id}", role="tablist", aria-multiselectable="true")
+		block
+
+//- accordion-item
+mixin accordion-item(title,parent,expanded)
+	.panel.panel-default
+		.panel-heading(role="tab", id="heading#{title}")
+			h4.panel-title
+				a(data-toggle="collapse", data-parent="#accordion#{parent}", href="#collapse#{title}", aria-expanded="true" ,aria-controls="collapseOne")
+					= title
+		unless expanded
+			.panel-collapse.collapse(id="collapse#{title}", role="tabpanel", aria-labelledby="heading#{title}")
+				.panel-body
+					block
+		else
+			.panel-collapse.collapse.in(id="collapse#{title}", role="tabpanel", aria-labelledby="heading#{title}")
+				.panel-body
+					block
+
+//- carousel
+mixin carousel(id,items)
+	.carousel.slide(id="carousel-#{id}",data-ride="carousel")
+		//- Indicators
+		ol.carousel-indicators
+			each item,index in items
+				if(index === 0)
+					li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
+				else
+					li(data-target="#carousel-#{id}", data-slide-to="#{index}")
+
+
+		//- Wrapper for slides
+		.carousel-inner(role="listbox")
+			each item,index in items
+				if(index === 0)
+					.item.active
+						img(src="#{item.image}")
+						.carousel-caption
+							|  #{item.caption}
+				else
+					.item
+						img(src="#{item.image}")
+						.carousel-caption
+							|  #{item.caption}
+
+		//-  Controls
+		a.left.carousel-control(href="#carousel-#{id}", role="button", data-slide="prev")
+			+icon("chevron-left")
+			span.sr-only Previous
+		a.right.carousel-control(href="#carousel-#{id}", role="button", data-slide="next")
+			+icon("chevron-right")
+			span.sr-only Next

@@ -2,43 +2,16 @@
 //- bootstrap mixins
 
 
-//- Generic alert
-mixin alert(type,message,icon)
-	.alert.alert-dismissible(role="alert",class="alert-#{type}")
-		+icon(icon)
-		button.close(type="button",data-dismiss="alert" aria-label="Close")
-			span(aria-hidden="true")  &times;
-		= message
-	
-//- Alert info
-mixin alert-info(message,icon)
-	unless icon
-		- var icon = "info-sign"
-	+alert("info",message,icon)
+//- Including Icon mixins
+include components/icons
+//- Including Alert mixins
+include components/alerts
+//- Including Tooltip mixins
+include components/tooltips
+//- Including Accordion mixins
+include components/accordion
 
-	
-//- Alert success
-mixin alert-success(message,icon)
-	unless icon
-		- var icon = "ok-sign"
-	+alert("success",message,icon)
 
-//- Alert warning		
-mixin alert-warning(message,icon)
-	unless icon
-		- var icon = "exclamation-sign"
-	+alert("warning",message,icon)
-
-//- Alert danger		
-mixin alert-danger(message)
-	unless icon
-		- var icon = "remove-sign"
-	+alert("danger",message,icon)
-
-//- Glyphicon
-mixin icon(name)
-	span.glyphicon(class="glyphicon-#{name}",aria-hidden="true")
-	| &nbsp;
 
 //- Dropdown
 mixin dropdown(caption,items)
@@ -232,51 +205,9 @@ mixin modal(title,id)
 				.modal-footer
 					button.btn.btn-default(type="button",data-dismiss="modal") Close
 
-//- tooltip
-mixin tooltip(text,placement)
-	a(href="#",data-toggle="tooltip",data-placement="#{placement}",title="#{text}")
-		block
 
-//- tooltip-left
-mixin tooltip-left(text)
-	+tooltip(text,"left")
-		block
-	
-//- tooltip-right
-mixin tooltip-right(text)
-	+tooltip(text,"right")
-		block
-	
-//- tooltip-top
-mixin tooltip-top(text)
-	+tooltip(text,"top")
-		block
-	
-//- tooltip-bottom
-mixin tooltip-bottom(text)
-	+tooltip(text,"bottom")
-		block
 
-//- accordion
-mixin accordion(id)
-	.panel-group(id="accordion#{id}", role="tablist", aria-multiselectable="true")
-		block
 
-//- accordion-item
-mixin accordion-item(title,parent,expanded)
-	.panel.panel-default
-		.panel-heading(role="tab", id="heading#{title}")
-			h4.panel-title
-				a(data-toggle="collapse", data-parent="#accordion#{parent}", href="#collapse#{title}", aria-expanded="true" ,aria-controls="collapseOne")
-					= title
-		unless expanded
-			.panel-collapse.collapse(id="collapse#{title}", role="tabpanel", aria-labelledby="heading#{title}")
-				.panel-body
-					block
-		else
-			.panel-collapse.collapse.in(id="collapse#{title}", role="tabpanel", aria-labelledby="heading#{title}")
-				.panel-body
-					block
 
 //- carousel
 mixin carousel(id,items)
@@ -311,3 +242,71 @@ mixin carousel(id,items)
 		a.right.carousel-control(href="#carousel-#{id}", role="button", data-slide="next")
 			+icon("chevron-right")
 			span.sr-only Next
+
+//- toggle
+mixin toggle(type,text)
+	button.btn(class="btn-#{type}",type="button",data-toggle="button",aria-pressed="false",autocomplete="off")
+		= text
+
+//- toggle-primary
+mixin toggle-primary(text)
+	+toggle("primary",text)
+
+//- toggle-default
+mixin toggle-default(text)
+	+toggle("default",text)
+
+
+//- toggle-info
+mixin toggle-info(text)
+	+toggle("info",text)
+
+
+//- toggle-success
+mixin toggle-success(text)
+	+toggle("success",text)
+
+
+//- toggle-warning
+mixin toggle-warning(text)
+	+toggle("warning",text)
+
+
+//- toggle-danger
+mixin toggle-danger(text)
+	+toggle("danger",text)
+
+//- checkbox button group
+mixin checkbox-buttons(type,items,active)
+	.btn-group(data-toggle="buttons")
+		each item,index in items
+			if(index === active)
+				label.btn.active(class="btn-#{type}")
+					input(type="checkbox",autocomplete="off",checked) 
+					|  #{item.caption}
+			else
+				label.btn(class="btn-#{type}")
+					input(type="checkbox",autocomplete="off") 
+					|  #{item.caption}
+
+//- checkbox-buttons-primary
+mixin checkbox-buttons-primary(items,active)
+	+checkbox-buttons("primary",items,active)
+	
+
+//- radio button group
+mixin radio-buttons(type,name,items,active)
+	.btn-group(data-toggle="buttons")
+		each item,index in items
+			if(index === active)
+				label.btn.active(class="btn-#{type}")
+					input(type="radio",name="#{name}",autocomplete="off",checked) 
+					|  #{item.caption}
+			else
+				label.btn(class="btn-#{type}")
+					input(type="radio",name="#{name}",autocomplete="off") 
+					|  #{item.caption}
+
+//- checkbox-buttons-primary
+mixin radio-buttons-primary(name,items,active)
+	+radio-buttons("primary",name,items,active)

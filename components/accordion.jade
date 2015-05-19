@@ -1,0 +1,51 @@
+//- accordion
+mixin accordion(id)
+	.panel-group(id="accordion#{id}", role="tablist", aria-multiselectable="true")
+		block
+
+//- accordion-item
+mixin accordion-item(type,title,parent,expanded)
+	-var id = title.replace(/\s+/g,"")
+	.panel(class="panel-#{type}")
+		.panel-heading(role="tab", id="heading#{title}")
+			h4.panel-title
+				a(data-toggle="collapse", data-parent="#accordion#{parent}", href="#collapse#{id}", aria-expanded="true" ,aria-controls="collapseOne")
+					= title
+		unless expanded
+			.panel-collapse.collapse(id="collapse#{id}", role="tabpanel", aria-labelledby="heading#{title}")
+				.panel-body
+					block
+		else
+			.panel-collapse.collapse.in(id="collapse#{id}", role="tabpanel", aria-labelledby="heading#{title}")
+				.panel-body
+					block
+
+//- accordion-item-default
+mixin accordion-item-default(title,parent,expanded)
+	+accordion-item("default",title,parent,expanded)
+		block
+		
+//- accordion-item-primary
+mixin accordion-item-primary(title,parent,expanded)
+	+accordion-item("primary",title,parent,expanded)
+		block
+
+//- accordion-item-info
+mixin accordion-item-info(title,parent,expanded)
+	+accordion-item("info",title,parent,expanded)
+		block
+
+//- accordion-item-success
+mixin accordion-item-success(title,parent,expanded)
+	+accordion-item("success",title,parent,expanded)
+		block
+		
+//- accordion-item-warning
+mixin accordion-item-warning(title,parent,expanded)
+	+accordion-item("warning",title,parent,expanded)
+		block
+		
+//- accordion-item-danger
+mixin accordion-item-danger(title,parent,expanded)
+	+accordion-item("danger",title,parent,expanded)
+		block

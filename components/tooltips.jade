@@ -1,0 +1,19 @@
+//- tooltip
+mixin tooltip(text,tooltip,placement)
+	a(href="#",data-toggle="tooltip",data-placement="#{placement}",title="#{tooltip}")= text
+
+//- tooltip-left
+mixin tooltip-left(text,tooltip)
+	+tooltip(text,tooltip,"left")
+	
+//- tooltip-right
+mixin tooltip-right(text,tooltip)
+	+tooltip(text,tooltip,"right")
+	
+//- tooltip-top
+mixin tooltip-top(text,tooltip)
+	+tooltip(text,tooltip,"top")
+	
+//- tooltip-bottom
+mixin tooltip-bottom(text,tooltip)
+	+tooltip(text,tooltip,"bottom")

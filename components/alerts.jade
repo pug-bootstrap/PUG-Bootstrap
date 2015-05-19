@@ -1,0 +1,137 @@
+//- alerts.jade
+//- alert mixins
+
+include icons
+//- Generic Simple alert
+mixin alert(type,message)
+	.alert(role="alert",class="alert-#{type}")
+		!= message
+
+//- Generic alert with icon
+mixin alert-i(type,message,icon)
+	.alert(role="alert",class="alert-#{type}")
+		+icon(icon)
+		|  &nbsp;
+		= message
+
+		
+//- Generic alert with close button
+mixin alert-x(type,message)
+	.alert.alert-dismissible(role="alert",class="alert-#{type}")
+		button.close(type="button",data-dismiss="alert" aria-label="Close")
+			span(aria-hidden="true")  &times;
+		= message
+		
+//- Generic alert with icon and close button
+mixin alert-ix(type,message,icon)
+	.alert.alert-dismissible(role="alert",class="alert-#{type}")
+		+icon(icon)
+		button.close(type="button",data-dismiss="alert" aria-label="Close")
+			span(aria-hidden="true")  &times;
+		= message
+	
+//------------------------------------------------------
+//- ALERTS 
+//------------------------------------------------------	
+//- Alert info
+mixin alert-info(message,icon)
+	unless icon
+		- var icon = "info-sign"
+	+alert("info",message,icon)
+
+	
+//- Alert success
+mixin alert-success(message,icon)
+	unless icon
+		- var icon = "ok-sign"
+	+alert("success",message,icon)
+
+//- Alert warning		
+mixin alert-warning(message,icon)
+	unless icon
+		- var icon = "exclamation-sign"
+	+alert("warning",message,icon)
+
+//- Alert danger		
+mixin alert-danger(message)
+	unless icon
+		- var icon = "remove-sign"
+	+alert("danger",message,icon)
+	
+//------------------------------------------------------
+//- ALERTS WITH ICONS
+//------------------------------------------------------	
+//- Alert info
+mixin alert-i-info(message,icon)
+	unless icon
+		- var icon = "info-sign"
+	+alert-i("info",message,icon)
+
+	
+//- Alert success
+mixin alert-i-success(message,icon)
+	unless icon
+		- var icon = "ok-sign"
+	+alert-i("success",message,icon)
+
+//- Alert warning		
+mixin alert-i-warning(message,icon)
+	unless icon
+		- var icon = "exclamation-sign"
+	+alert-i("warning",message,icon)
+
+//- Alert danger		
+mixin alert-i-danger(message)
+	unless icon
+		- var icon = "remove-sign"
+	+alert-i("danger",message,icon)
+
+	
+//------------------------------------------------------
+//- DISMISSIBLE ALERTS
+//------------------------------------------------------	
+//- Alert info
+mixin alert-x-info(message)
+	+alert-x("info",message)
+
+	
+//- Alert success
+mixin alert-x-success(message)
+	+alert-x("success",message)
+
+//- Alert warning		
+mixin alert-x-warning(message)
+	+alert-x("warning",message)
+
+//- Alert danger		
+mixin alert-x-danger(message)
+	+alert-x("danger",message)
+
+	
+//------------------------------------------------------
+//- DISMISSIBLE ALERTS WITH ICONS
+//------------------------------------------------------	
+//- Alert info
+mixin alert-ix-info(message,icon)
+	unless icon
+		- var icon = "info-sign"
+	+alert-ix("info",message,icon)
+
+	
+//- Alert success
+mixin alert-ix-success(message,icon)
+	unless icon
+		- var icon = "ok-sign"
+	+alert-ix("success",message,icon)
+
+//- Alert warning		
+mixin alert-ix-warning(message,icon)
+	unless icon
+		- var icon = "exclamation-sign"
+	+alert-ix("warning",message,icon)
+
+//- Alert danger		
+mixin alert-ix-danger(message)
+	unless icon
+		- var icon = "remove-sign"
+	+alert-ix("danger",message,icon)

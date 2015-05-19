@@ -240,36 +240,80 @@
             <pre><code data-lang="jade" class="language-jade"> +icon("search")</code></pre>
           </div>
           <h3>Alerts</h3>
-          <div role="alert" class="alert alert-dismissible alert-info"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+          <hr>
+          <h4>Simple Alerts </h4>
+          <div role="alert" class="alert alert-info">This is an info alert
+          </div>
+          <div role="alert" class="alert alert-info"><strong>Well done!</strong> You successfully read this important alert message.
+          </div>
+          <div role="alert" class="alert alert-danger">This is a danger alert
+          </div>
+          <div role="alert" class="alert alert-success">This is a success alert
+          </div>
+          <div role="alert" class="alert alert-warning">This is a warning alert
+          </div>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade"> +alert-info("This is an info alert")
+ +alert-danger("This is a danger alert")
+ +alert-success("This is a success alert")
+ +alert-warning("This is a warning alert")</code></pre>
+          </div>
+          <h4>Alerts with icons</h4>
+          <div role="alert" class="alert alert-info"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> &nbsp;This is an info alert
+          </div>
+          <div role="alert" class="alert alert-info"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> &nbsp;This is an info alert with custom icon
+          </div>
+          <div role="alert" class="alert alert-danger"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span> &nbsp;This is a danger alert
+          </div>
+          <div role="alert" class="alert alert-success"><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> &nbsp;This is a success alert
+          </div>
+          <div role="alert" class="alert alert-warning"><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span> &nbsp;This is a warning alert
+          </div>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade"> +alert-i-info("This is an info alert")
+ +alert-i-info("This is an info alert with custom icon","heart")
+ +alert-i-danger("This is a danger alert")
+ +alert-i-success("This is a success alert")
+ +alert-i-warning("This is a warning alert")</code></pre>
+          </div>
+          <h4>Dismissible Alerts</h4>
+          <div role="alert" class="alert alert-dismissible alert-info">
             <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert
           </div>
-          <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +alert-info("This is an info alert")</code></pre>
+          <div role="alert" class="alert alert-dismissible alert-danger">
+            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a danger alert
           </div>
-          <div role="alert" class="alert alert-dismissible alert-info"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span>
-            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert with custom icon
+          <div role="alert" class="alert alert-dismissible alert-success">
+            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a success alert
+          </div>
+          <div role="alert" class="alert alert-dismissible alert-warning">
+            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a warning alert
           </div>
           <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +alert-info("This is an info alert with custom icon","heart")</code></pre>
+            <pre><code data-lang="jade" class="language-jade"> +alert-x-info("This is an info alert")
+ +alert-x-danger("This is a danger alert")
+ +alert-x-success("This is a success alert")
+ +alert-x-warning("This is a warning alert")</code></pre>
+          </div>
+          <h4>Dismissible Alerts with icons</h4>
+          <div role="alert" class="alert alert-dismissible alert-info"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+            <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is an info alert
           </div>
           <div role="alert" class="alert alert-dismissible alert-danger"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span>
             <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a danger alert
           </div>
-          <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +alert-danger("This is a danger alert")</code></pre>
-          </div>
           <div role="alert" class="alert alert-dismissible alert-success"><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span>
             <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a success alert
-          </div>
-          <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +alert-success("This is a success alert")</code></pre>
           </div>
           <div role="alert" class="alert alert-dismissible alert-warning"><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span>
             <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true"> &times;</span></button>This is a warning alert
           </div>
           <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +alert-warning("This is a warning alert")</code></pre>
-          </div><br>
+            <pre><code data-lang="jade" class="language-jade"> +alert-ix-info("This is an info alert")
+ +alert-ix-danger("This is a danger alert")
+ +alert-ix-success("This is a success alert")
+ +alert-ix-warning("This is a warning alert")</code></pre>
+          </div>
           <h3>Dropdowns</h3>
           <div class="dropdown">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">My Dropdown Menu&nbsp;<span class="caret"></span>
@@ -378,8 +422,20 @@
           </div><br>
           <button type="button" aria-label="search" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
           </button>
+          <div class="highlight">
+            <pre><code>+icon-btn("search")</code></pre>
+          </div>
           <h2>Labels</h2><span class="label label-default">Default</span><span class="label label-primary">Primary</span><span class="label label-success">Success</span><span class="label label-info">Info</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span>
-          <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a><br><br><br>
+          <div class="highlight">
+            <pre><code>+label-default("Default")
++label-primary("Primary")
++label-success("Success")
++label-info("Info")
++label-warning("Warning")
++label-danger("Danger")</code></pre>
+          </div>
+          <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a>
+          <h2>Tabs</h2>
           <ul role="tablist" class="nav nav-tabs">
             <li class="active"><a href="#tabHome" role="tab" data-toggle="tab">Home</a></li>
             <li><a href="#tabProfile" role="tab" data-toggle="tab">Profile</a></li>
@@ -403,7 +459,23 @@
               <h1>Settings</h1>
               <p>This is Settings tab</p>
             </div>
-          </div><br><br>
+          </div>
+          <div class="highlight">
+            <pre><code> +tab-list(["Home","Profile","Messages","Settings"],0)
+	+tab("Home","active")
+		h1 Home
+		p This is Home tab
+	+tab("Profile")
+		h1 Profile
+		p This is Profile tab
+	+tab("Messages")
+		h1 Messages
+		p This is Messages tab
+	+tab("Settings")
+		h1 Settings
+		p This is Settings tab</code></pre>
+          </div>
+          <h2>Panels</h2>
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Primary Panel</h3>
@@ -411,6 +483,10 @@
             <div class="panel-body">
               <p>This is primary panel </p>
             </div>
+          </div>
+          <div class="highlight">
+            <pre><code> +panel-primary("Primary Panel")
+ 	p This is primary panel </code></pre>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -420,6 +496,10 @@
               <p>This is default panel </p>
             </div>
           </div>
+          <div class="highlight">
+            <pre><code> +panel-default("Default Panel")
+ 	p This is default panel </code></pre>
+          </div>
           <div class="panel panel-success">
             <div class="panel-heading">
               <h3 class="panel-title">Success Panel</h3>
@@ -427,6 +507,10 @@
             <div class="panel-body">
               <p>This is success panel </p>
             </div>
+          </div>
+          <div class="highlight">
+            <pre><code> +panel-success("Success Panel")
+ 	p This is success panel </code></pre>
           </div>
           <div class="panel panel-info">
             <div class="panel-heading">
@@ -436,6 +520,10 @@
               <p>This is info panel </p>
             </div>
           </div>
+          <div class="highlight">
+            <pre><code> +panel-info("Info Panel")
+ 	p This is info panel </code></pre>
+          </div>
           <div class="panel panel-warning">
             <div class="panel-heading">
               <h3 class="panel-title">Warning Panel</h3>
@@ -444,6 +532,10 @@
               <p>This is warning panel </p>
             </div>
           </div>
+          <div class="highlight">
+            <pre><code> +panel-warning("Warning Panel")
+ 	p This is warning panel </code></pre>
+          </div>
           <div class="panel panel-danger">
             <div class="panel-heading">
               <h3 class="panel-title">Danger Panel</h3>
@@ -451,7 +543,12 @@
             <div class="panel-body">
               <p>This is danger panel </p>
             </div>
-          </div><br><br><br>
+          </div>
+          <div class="highlight">
+            <pre><code> +panel-danger("Danger Panel")
+ 	p This is danger panel </code></pre>
+          </div>
+          <h2>Modal </h2>
           <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Launch demo modal</button>
           <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
             <div class="modal-dialog">
@@ -468,12 +565,62 @@
                 </div>
               </div>
             </div>
-          </div><br><br><a href="#" data-toggle="tooltip" data-placement="left" title="This is a tooltip on the left"> Show Left Tooltip</a><a href="#" data-toggle="tooltip" data-placement="right" title="This is a tooltip on the right"> Show Right Tooltip</a><a href="#" data-toggle="tooltip" data-placement="top" title="This is a tooltip on the top"> Show Top Tooltip</a><a href="#" data-toggle="tooltip" data-placement="bottom" title="This is a tooltip on the bottom"> Show Bottom Tooltip</a><br><br>
+          </div>
+          <div class="highlight">
+            <pre><code> button.btn.btn-primary(data-toggle="modal",data-target="#myModal") Launch demo modal
+ +modal("Modal title","myModal")
+	p This is modal content</code></pre>
+          </div>
+          <h2>Tooltips</h2>
+          <p> These toolips are rendered using a default anchor element with href attribute set as "#", based on the position parameter the tooltip is shown accordingly.</p><a href="#" data-toggle="tooltip" data-placement="left" title="This is a tooltip on the left">Show Left Tooltip</a>
+          <div class="highlight">
+            <pre><code> +tooltip-left("This is a tooltip on the left")</code></pre>
+          </div><a href="#" data-toggle="tooltip" data-placement="right" title="This is a tooltip on the right">Show Right Tooltip</a>
+          <div class="highlight">
+            <pre><code> +tooltip-right("This is a tooltip on the right")</code></pre>
+          </div><a href="#" data-toggle="tooltip" data-placement="top" title="This is a tooltip on the top">Show Top Tooltip</a>
+          <div class="highlight">
+            <pre><code> +tooltip-top("This is a tooltip on the top")</code></pre>
+          </div><a href="#" data-toggle="tooltip" data-placement="bottom" title="This is a tooltip on the bottom">Show Bottom Tooltip</a>
+          <div class="highlight">
+            <pre><code> +tooltip-bottom("This is a tooltip on the bottom")</code></pre>
+          </div><br><br>
           <button type="button" data-toggle="tooltip" data-placement="left" title="Tooltip on left" class="btn btn-default"> Tooltip on left</button><br><br>
           <h3>Collapse</h3>
           <hr>Flexible plugin that utilizes a handful of classes for easy toggle behavior.
+          <h4>Example - Accordion primary</h4>
+          <div id="accordionsample2" role="tablist" aria-multiselectable="true" class="panel-group">
+            <div class="panel panel-primary">
+              <div role="tab" id="headingAccordion Title1" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample2" href="#collapseAccordionTitle1" aria-expanded="true" aria-controls="collapseOne">Accordion Title1</a></h4>
+              </div>
+              <div id="collapseAccordionTitle1" role="tabpanel" aria-labelledby="headingAccordion Title1" class="panel-collapse collapse in">
+                <div class="panel-body"> This is first accordion content
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div role="tab" id="headingAccordion Title2" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample2" href="#collapseAccordionTitle2" aria-expanded="true" aria-controls="collapseOne">Accordion Title2</a></h4>
+              </div>
+              <div id="collapseAccordionTitle2" role="tabpanel" aria-labelledby="headingAccordion Title2" class="panel-collapse collapse">
+                <div class="panel-body"> This is second accordion content
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div role="tab" id="headingAccordion Title3" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample2" href="#collapseAccordionTitle3" aria-expanded="true" aria-controls="collapseOne">Accordion Title3</a></h4>
+              </div>
+              <div id="collapseAccordionTitle3" role="tabpanel" aria-labelledby="headingAccordion Title3" class="panel-collapse collapse">
+                <div class="panel-body"> This is third accordion content
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4>Example - Accordion mixed</h4>
           <div id="accordionsample" role="tablist" aria-multiselectable="true" class="panel-group">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
               <div role="tab" id="headingTitle1" class="panel-heading">
                 <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample" href="#collapseTitle1" aria-expanded="true" aria-controls="collapseOne">Title1</a></h4>
               </div>
@@ -491,7 +638,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-success">
               <div role="tab" id="headingTitle3" class="panel-heading">
                 <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample" href="#collapseTitle3" aria-expanded="true" aria-controls="collapseOne">Title3</a></h4>
               </div>
@@ -500,14 +647,41 @@
                 </div>
               </div>
             </div>
+            <div class="panel panel-info">
+              <div role="tab" id="headingTitle4" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample" href="#collapseTitle4" aria-expanded="true" aria-controls="collapseOne">Title4</a></h4>
+              </div>
+              <div id="collapseTitle4" role="tabpanel" aria-labelledby="headingTitle4" class="panel-collapse collapse">
+                <div class="panel-body"> This is fourth accordion content
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-warning">
+              <div role="tab" id="headingTitle5" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample" href="#collapseTitle5" aria-expanded="true" aria-controls="collapseOne">Title5</a></h4>
+              </div>
+              <div id="collapseTitle5" role="tabpanel" aria-labelledby="headingTitle5" class="panel-collapse collapse">
+                <div class="panel-body"> This is fifth accordion content
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-danger">
+              <div role="tab" id="headingTitle6" class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionsample" href="#collapseTitle6" aria-expanded="true" aria-controls="collapseOne">Title6</a></h4>
+              </div>
+              <div id="collapseTitle6" role="tabpanel" aria-labelledby="headingTitle6" class="panel-collapse collapse">
+                <div class="panel-body"> This is sixth accordion content
+                </div>
+              </div>
+            </div>
           </div><br>
           <div class="highlight">
             <pre><code>+accordion("sample")
-	+accordion-item("Title1","sample","true")
+	+accordion-item-primary("Title1","sample","true")
 		|  This is first accordion content
-	+accordion-item("Title2","sample")
+	+accordion-item-default("Title2","sample")
 		|  This is second accordion content
-	+accordion-item("Title3","sample")
+	+accordion-item-default("Title3","sample")
 		|  This is third accordion content</code></pre>
           </div>
           <h3>Carousel</h3>
@@ -543,6 +717,43 @@
 	{image:"images/slide4.jpg",caption:"Carousel Caption #4"}
 ])</code></pre>
           </div>
+          <h3>Single Toggle</h3>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-primary">Single toggle
+          </button>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-default">Single toggle
+          </button>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-info">Single toggle
+          </button>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-success">Single toggle
+          </button>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-warning">Single toggle
+          </button>
+          <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-danger">Single toggle
+          </button>
+          <h3>Checkboxes</h3>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-primary">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <h3>Radio Buttons</h3>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-primary">
+              <input type="radio" name="radOptions" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="radOptions" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="radOptions" autocomplete="off"/> Radio3
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -551,5 +762,26 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.min.js"></script>
+    <footer class="text-center">
+      <hr>
+      <div class="container">
+        <p> Designed and built with all the love in the world by <a href="https://twitter.com/hangaroundweb">@hangaroundweb</a>.</p>
+        <ul class="jb-social-buttons">
+          <li>
+            <iframe src="http://ghbtns.com/github-btn.html?user=rajasegar&amp;repo=JADE-Bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" class="github-btn"></iframe>
+          </li>
+          <li>
+            <iframe src="http://ghbtns.com/github-btn.html?user=rajasegar&amp;repo=JADE-Bootstrap&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px" class="github-btn"></iframe>
+          </li>
+          <li><a href="https://twitter.com/hangaroundweb" class="twitter-follow-button" data-show-count="true">Follow @hangaroundweb</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              
+            </script>
+          </li>
+          <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="hangaroundweb">Tweet</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,40 @@
+//- carousel caption
+mixin carousel-caption(item)
+	.carousel-caption
+		h1 #{item.h1}
+		p #{item.p}
+		p
+			a.btn.btn-lg.btn-primary(href="#{item.button.url}" role="button") #{item.button.caption}
+
+//- carousel
+mixin carousel(id,items)
+	.carousel.slide(id="carousel-#{id}",data-ride="carousel")
+		//- Indicators
+		ol.carousel-indicators
+			each item,index in items
+				if(index === 0)
+					li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
+				else
+					li(data-target="#carousel-#{id}", data-slide-to="#{index}")
+
+
+		//- Wrapper for slides
+		.carousel-inner(role="listbox")
+			each item,index in items
+				if(index === 0)
+					.item.active
+						img(src="#{item.image}")
+						+carousel-caption(item)
+							
+				else
+					.item
+						img(src="#{item.image}")
+						+carousel-caption(item)
+
+		//-  Controls
+		a.left.carousel-control(href="#carousel-#{id}", role="button", data-slide="prev")
+			+icon("chevron-left")
+			span.sr-only Previous
+		a.right.carousel-control(href="#carousel-#{id}", role="button", data-slide="next")
+			+icon("chevron-right")
+			span.sr-only Next

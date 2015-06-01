@@ -10,8 +10,14 @@ include components/alerts
 include components/tooltips
 //- Including Accordion mixins
 include components/accordion
-
-
+//- Including Carousel mixins
+include components/carousel
+//- Including Table mixins
+include components/tables
+//- Including Navbar mixins
+include components/navbar
+//- Including Toggle Button mixins
+include components/toggle
 
 //- Dropdown
 mixin dropdown(caption,items)
@@ -209,104 +215,5 @@ mixin modal(title,id)
 
 
 
-//- carousel
-mixin carousel(id,items)
-	.carousel.slide(id="carousel-#{id}",data-ride="carousel")
-		//- Indicators
-		ol.carousel-indicators
-			each item,index in items
-				if(index === 0)
-					li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
-				else
-					li(data-target="#carousel-#{id}", data-slide-to="#{index}")
 
 
-		//- Wrapper for slides
-		.carousel-inner(role="listbox")
-			each item,index in items
-				if(index === 0)
-					.item.active
-						img(src="#{item.image}")
-						.carousel-caption
-							|  #{item.caption}
-				else
-					.item
-						img(src="#{item.image}")
-						.carousel-caption
-							|  #{item.caption}
-
-		//-  Controls
-		a.left.carousel-control(href="#carousel-#{id}", role="button", data-slide="prev")
-			+icon("chevron-left")
-			span.sr-only Previous
-		a.right.carousel-control(href="#carousel-#{id}", role="button", data-slide="next")
-			+icon("chevron-right")
-			span.sr-only Next
-
-//- toggle
-mixin toggle(type,text)
-	button.btn(class="btn-#{type}",type="button",data-toggle="button",aria-pressed="false",autocomplete="off")
-		= text
-
-//- toggle-primary
-mixin toggle-primary(text)
-	+toggle("primary",text)
-
-//- toggle-default
-mixin toggle-default(text)
-	+toggle("default",text)
-
-
-//- toggle-info
-mixin toggle-info(text)
-	+toggle("info",text)
-
-
-//- toggle-success
-mixin toggle-success(text)
-	+toggle("success",text)
-
-
-//- toggle-warning
-mixin toggle-warning(text)
-	+toggle("warning",text)
-
-
-//- toggle-danger
-mixin toggle-danger(text)
-	+toggle("danger",text)
-
-//- checkbox button group
-mixin checkbox-buttons(type,items,active)
-	.btn-group(data-toggle="buttons")
-		each item,index in items
-			if(index === active)
-				label.btn.active(class="btn-#{type}")
-					input(type="checkbox",autocomplete="off",checked) 
-					|  #{item.caption}
-			else
-				label.btn(class="btn-#{type}")
-					input(type="checkbox",autocomplete="off") 
-					|  #{item.caption}
-
-//- checkbox-buttons-primary
-mixin checkbox-buttons-primary(items,active)
-	+checkbox-buttons("primary",items,active)
-	
-
-//- radio button group
-mixin radio-buttons(type,name,items,active)
-	.btn-group(data-toggle="buttons")
-		each item,index in items
-			if(index === active)
-				label.btn.active(class="btn-#{type}")
-					input(type="radio",name="#{name}",autocomplete="off",checked) 
-					|  #{item.caption}
-			else
-				label.btn(class="btn-#{type}")
-					input(type="radio",name="#{name}",autocomplete="off") 
-					|  #{item.caption}
-
-//- checkbox-buttons-primary
-mixin radio-buttons-primary(name,items,active)
-	+radio-buttons("primary",name,items,active)

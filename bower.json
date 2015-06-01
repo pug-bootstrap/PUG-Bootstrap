@@ -1,0 +1,25 @@
+{
+  "name": "jade-bootstrap",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rajasegar/JADE-Bootstrap",
+  "authors": [
+    "Rajasegar <rajasegar.c@gmail.com>"
+  ],
+  "description": "Bootstrap framework written completely using mixins in JADE",
+  "main": "bootstrap.jade",
+  "keywords": [
+    "jade",
+    "bootstrap",
+    "frontend",
+    "ui",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

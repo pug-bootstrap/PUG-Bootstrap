@@ -1,0 +1,30 @@
+{
+  "name": "jade-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap framework written completely using mixins in JADE",
+  "main": "bootstrap.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajasegar/JADE-Bootstrap.git"
+  },
+  "keywords": [
+    "jade",
+    "bootstrap",
+    "twitter",
+    "bootstrap",
+    "frontend",
+    "ui",
+    "framework",
+    "jade",
+    "mixins"
+  ],
+  "author": "Rajasegar Chandiran",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/rajasegar/JADE-Bootstrap/issues"
+  },
+  "homepage": "https://github.com/rajasegar/JADE-Bootstrap"
+}

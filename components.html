@@ -3,9 +3,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>JADE-Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--link(rel="stylesheet",href="css/bootstrap.min.css")-->
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--script(src="js/jquery.min.js")-->
+    <!--script(src="js/bootstrap.min.js")-->
+  </body>
+</html><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
     <title>JADE-Bootstrap</title>
     <!--link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/codemirror.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="icon" href="favicon.ico">
   </head>
@@ -19,10 +39,8 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="getting-started.html">Getting started</a></li>
-            <li><a href="css.html"> CSS</a></li>
             <li class="active"><a href="#">Components</a></li>
-            <li><a href="javascript.html">JavaScript</a></li>
-            <li><a href="customize.html">Customize</a></li>
+            <li><a href="jade_converter.html">JADE Converter</a></li>
           </ul>
         </div>
       </div>
@@ -435,6 +453,36 @@
 +label-danger("Danger")</code></pre>
           </div>
           <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a>
+          <h2>Nav-Tabs</h2>
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Message</a></li>
+          </ul>
+          <h2>Nav-Tabs Justified</h2>
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Message</a></li>
+          </ul>
+          <h2>Nav-Pills</h2>
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Message</a></li>
+          </ul>
+          <h2>Nav-Pills Justified</h2>
+          <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Message</a></li>
+          </ul>
+          <h2>Nav-Stacked</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Message</a></li>
+          </ul>
           <h2>Tabs</h2>
           <ul role="tablist" class="nav nav-tabs">
             <li class="active"><a href="#tabHome" role="tab" data-toggle="tab">Home</a></li>
@@ -696,16 +744,24 @@
             </ol>
             <div role="listbox" class="carousel-inner">
               <div class="item active"><img src="images/slide1.jpg"/>
-                <div class="carousel-caption"> Carousel Caption #1</div>
+                <div class="carousel-caption">
+                  <p>Carousel Caption #1</p>
+                </div>
               </div>
               <div class="item"><img src="images/slide2.jpg"/>
-                <div class="carousel-caption"> Carousel Caption #2</div>
+                <div class="carousel-caption">
+                  <p>Carousel Caption #2</p>
+                </div>
               </div>
               <div class="item"><img src="images/slide3.jpg"/>
-                <div class="carousel-caption"> Carousel Caption #3</div>
+                <div class="carousel-caption">
+                  <p>Carousel Caption #3</p>
+                </div>
               </div>
               <div class="item"><img src="images/slide4.jpg"/>
-                <div class="carousel-caption"> Carousel Caption #4</div>
+                <div class="carousel-caption">
+                  <p>Carousel Caption #4</p>
+                </div>
               </div>
             </div><a href="#carousel-sample" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#carousel-sample" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
           </div><br>
@@ -754,6 +810,237 @@
               <input type="radio" name="radOptions" autocomplete="off"/> Radio3
             </label>
           </div>
+          <h3>Tables</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>List groups</h3>
+          <h4>Simple list groups</h4>
+          <div class="col-md-4">
+            <ul class="list-group"></ul>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Cras justo odio</li>
+          </div>
+          <h4>List group with links</h4>
+          <div class="col-md-4">
+            <div class="list-group"></div><a href="#" class="list-group-item active">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a>
+          </div>
+          <div class="clearfix"></div>
+          <h4>Custom list group</h4>
+          <div class="list-group"><a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a>
+          </div>
         </div>
       </div>
     </div>
@@ -765,7 +1052,6 @@
     <footer class="text-center">
       <hr>
       <div class="container">
-        <p> Designed and built with all the love in the world by <a href="https://twitter.com/hangaroundweb">@hangaroundweb</a>.</p>
         <ul class="jb-social-buttons">
           <li>
             <iframe src="http://ghbtns.com/github-btn.html?user=rajasegar&amp;repo=JADE-Bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" class="github-btn"></iframe>
@@ -781,6 +1067,9 @@
           </li>
           <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="hangaroundweb">Tweet</a></li>
         </ul>
+        <p> Designed and built with all the love in the world by <a href="https://twitter.com/hangaroundweb">@hangaroundweb</a>.</p>
+        <p> Maintained by <a href="https://github.com/rajasegar">Rajasegar Chandiran</a></p>
+        <p> Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a></p>
       </div>
     </footer>
   </body>

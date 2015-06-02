@@ -33,44 +33,39 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">JADE-Bootstrap</a>
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">JADE-Bootstrap</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="getting-started.html">Getting started</a></li>
             <li><a href="components.html">Components</a></li>
-            <li><a href="jade_converter.html">JADE Converter</a></li>
+            <li class="active"><a href="#">JADE Converter</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="masthead">
-      <div class="container">
-        <div class="jumbotron">
-          <h1>JADE-Bootstrap</h1>
-          <p>The power of Bootstrap combined with the speed of Jade for faster and easier web development.</p>
-          <p><a href="https://github.com/rajasegar/JADE-Bootstrap" class="btn btn-default"> <span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span> View on GitHub</a>&nbsp;<a href="https://github.com/rajasegar/JADE-Bootstrap/archive/master.zip" class="btn btn-default"> <span aria-hidden="true" class="glyphicon glyphicon-download"></span> Download .zip</a>&nbsp;<a href="https://github.com/rajasegar/JADE-Bootstrap/archive/master.tar.gz" class="btn btn-default"> <span aria-hidden="true" class="glyphicon glyphicon-download"></span> Download .tar</a></p>
-          <p>Currently v0.0.1</p>
-        </div>
-      </div>
-    </div><br>
-    <div class="container">
-      <div class="row">
+    <div class="container-fluid">
+      <div class="row-fluid">
         <div class="col-md-6">
-          <div class="jumbotron jumbotron-jade text-center">
-            <h1>JADE</h1>
-            <p><a class="jumbotron-link" href="http://jade-lang.com">Jade</a> is a high performance template engine heavily influenced by <a class="jumbotron-link" href="http://haml-lang.com/">Haml</a> and implemented with JavaScript for <a class="jumbotron-link" href="http://nodejs.org/">node</a> and browsers. </p><a href="http://jade-lang.com" class="btn btn-default">Go to Website</a>&nbsp;<a href="https://github.com/jadejs/jade" class="btn btn-default">View the GitHub project</a>
-          </div>
+          <h2>HTML</h2>
+          <textarea id="html_editor" class="form-control"></textarea>
         </div>
         <div class="col-md-6">
-          <div class="jumbotron jumbotron-bootstrap text-center">
-            <h1>Bootstrap</h1>
-            <p><a  class="jumbotron-link" href="http://getbootstrap.com">Bootstrap</a> makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p><a href="http://getbootstrap.com" class="btn btn-default">Go to Website</a>&nbsp;<a href="https://github.com/twbs/bootstrap" class="btn btn-default">View the GitHub project</a>
-          </div>
+          <h2>JADE</h2>
+          <textarea id="jade_editor" class="form-control"></textarea>
         </div>
       </div>
     </div>
+    <script src="js/codemirror.js"></script>
+    <script src="js/mode/xml/xml.min.js"></script>
+    <script src="js/mode/javascript/javascript.min.js"></script>
+    <script src="js/mode/css/css.min.js"></script>
+    <script src="js/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="js/mode/jade/jade.min.js"></script>
+    <script src="js/he.js"></script>
+    <script src="js/html2jade.js"></script>
+    <script src="js/jade_converter.min.js"></script>
     <!--script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")-->
     <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")-->
     <script src="js/jquery.min.js"></script>

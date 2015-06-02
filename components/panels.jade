@@ -1,0 +1,37 @@
+//- panel
+mixin panel(type,title)
+	.panel(class="panel-#{type}")
+		.panel-heading
+			h3.panel-title= title
+		.panel-body
+			block
+
+//- panel-default
+mixin panel-default(title)
+	+panel("default",title)
+		block
+
+//- panel-primary
+mixin panel-primary(title)
+	+panel("primary",title)
+		block
+		
+//- panel-success
+mixin panel-success(title)
+	+panel("success",title)
+		block
+		
+//- panel-info
+mixin panel-info(title)
+	+panel("info",title)
+		block
+
+//- panel-warning
+mixin panel-warning(title)
+	+panel("warning",title)
+		block
+		
+//- panel-danger
+mixin panel-danger(title)
+	+panel("danger",title)
+		block

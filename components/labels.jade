@@ -1,0 +1,27 @@
+//- Generic label
+mixin label(type,text)
+	span.label(class="label-#{type}")= text
+
+//- Info label
+mixin label-default(text)
+	+label("default",text)
+	
+//- Info label
+mixin label-info(text)
+	+label("info",text)
+
+//- Primary label
+mixin label-primary(text)
+	+label("primary",text)
+	
+//- Success label
+mixin label-success(text)
+	+label("success",text)
+	
+//- Warning label
+mixin label-warning(text)
+	+label("warning",text)
+	
+//- Danger label
+mixin label-danger(text)
+	+label("danger",text)

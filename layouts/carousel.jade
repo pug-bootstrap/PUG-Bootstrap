@@ -1,0 +1,118 @@
+extends ../bootstrap
+append styles
+	// Custom styles for this template 
+	link(href="../css/carousel.css", rel="stylesheet")
+block body
+	.navbar-wrapper
+		.container
+			nav.navbar.navbar-inverse.navbar-static-top
+				.container
+					.navbar-header
+						button(type="button" ,class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar" ,aria-expanded="false", aria-controls="navbar")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+							
+						a(class="navbar-brand", href="#") Project name
+					#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Home
+							li
+								a(href="#about") About
+							li
+								a(href="#contact") Contact
+							li.dropdown
+								a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+									| Dropdown 
+									span.caret
+								ul.dropdown-menu(role='menu')
+									li
+										a(href='#') Action
+									li
+										a(href='#') Another action
+									li
+										a(href='#') Something else here
+									li.divider
+									li.dropdown-header Nav header
+									li
+										a(href='#') Separated link
+									li
+										a(href='#') One more separated link
+							
+	// Carousel
+	// ==================================================
+	+carousel("myCarousel",[{image:"/images/carousel1.jpg",h1:"Example headline",p:"Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",button:{caption:"Sign up today",url:"#"}},{image:"/images/carousel2.jpg",h1:"Another example headline",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Learn more",url:"#"}},	{image:"/images/carousel3.jpg",h1:"One more for good measure.",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Browse gallery",url:"#"}}])
+	//  Marketing messaging and featurettes
+	//  ==================================================
+	// Wrap the rest of the page in another container to center all the content.
+	.container.marketing
+		// Three columns of text below the carousel
+		.row
+			.col-lg-4
+				img.img-circle(src='/images/marketing1.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Heading
+				p
+					| Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-lg-4
+				img.img-circle(src='/images/marketing2.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Heading
+				p
+					| Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-lg-4
+				img.img-circle(src='/images/marketing3.jpg', alt='Generic placeholder image', width='140', height='140')
+				h2 Heading
+				p
+					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+		// START THE FEATURETTES
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| First featurette heading. 
+					span.text-muted It'll blow your mind.
+				p.lead
+					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+			.col-md-5
+				img.featurette-image.img-responsive.center-block(src='/images/featurette1.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7.col-md-push-5
+				h2.featurette-heading
+					| Oh yeah, it's that good. 
+					span.text-muted See for yourself.
+				p.lead
+					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+			.col-md-5.col-md-pull-7
+				img.featurette-image.img-responsive.center-block(src='/images/featurette2.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| And lastly, this one. 
+					span.text-muted Checkmate.
+				p.lead
+					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+			.col-md-5
+				img.featurette-image.img-responsive.center-block(src='/images/featurette3.jpg', alt='Generic placeholder image')
+		hr.featurette-divider
+		// /END THE FEATURETTES
+		// FOOTER
+		footer
+			p.pull-right
+				a(href='#') Back to top
+			p
+				| © 2014 Company, Inc. · 
+				a(href='#') Privacy
+				|  · 
+				a(href='#') Terms
+
+
+

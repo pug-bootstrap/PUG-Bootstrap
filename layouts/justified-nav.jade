@@ -1,0 +1,55 @@
+extends ../bootstrap
+append styles
+	// Custom styles for this template
+	link(href='../css/justified-nav.css', rel='stylesheet')
+block body
+	.container
+		//  The justified navigation menu is meant for single line per list item.   Multiple lines will require custom code not provided by Bootstrap.
+		.masthead
+			h3.text-muted Project name
+			nav
+				ul.nav.nav-justified
+					li.active
+						a(href='#') Home
+					li
+						a(href='#') Projects
+					li
+						a(href='#') Services
+					li
+						a(href='#') Downloads
+					li
+						a(href='#') About
+					li
+						a(href='#') Contact
+		// Jumbotron
+		.jumbotron
+			h1 Marketing stuff!
+			p.lead
+				| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.
+			p
+				a.btn.btn-lg.btn-success(href='#', role='button') Get started today
+		// Example row of columns
+		.row
+			.col-lg-4
+				h2 Safari bug warning!
+				p.text-danger
+					| As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.
+				p
+					| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				p
+					a.btn.btn-primary(href='#', role='button') View details »
+			.col-lg-4
+				h2 Heading
+				p
+					| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				p
+					a.btn.btn-primary(href='#', role='button') View details »
+			.col-lg-4
+				h2 Heading
+				p
+					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+				p
+					a.btn.btn-primary(href='#', role='button') View details »
+		// Site footer
+		footer.footer
+			p © Company 2014

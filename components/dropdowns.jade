@@ -1,0 +1,25 @@
+//- Dropdown
+mixin dropdown(caption,items)
+	.dropdown
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+			= caption
+			| &nbsp;
+			span.caret
+		ul.dropdown-menu(role="menu",aria-labelledby="dropdownMenu1")
+			- var args = Array.prototype.slice.call(arguments);
+			for item in args[1]
+				li(role="presentation")
+					a(role="menuitem",tabindex="-1",href="#{item.url}")= item.text
+
+//- Dropup
+mixin dropup(caption,items)
+	.dropup
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+			= caption
+			| &nbsp;
+			span.caret
+		ul.dropdown-menu(role="menu",aria-labelledby="dropupMenu1")
+			- var args = Array.prototype.slice.call(arguments);
+			for item in args[1]
+				li(role="presentation")
+					a(role="menuitem",tabindex="-1",href="#{item.url}")= item.text

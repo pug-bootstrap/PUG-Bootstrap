@@ -1,0 +1,184 @@
+extends ../bootstrap
+append styles
+	// Custom styles for this template
+	link(href='../css/dashboard.css', rel='stylesheet')
+block body  
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container-fluid
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Project name
+			#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='#') Dashboard
+					li
+						a(href='#') Settings
+					li
+						a(href='#') Profile
+					li
+						a(href='#') Help
+				form.navbar-form.navbar-right
+					input.form-control(type='text', placeholder='Search...')
+	.container-fluid
+		.row
+			.col-sm-3.col-md-2.sidebar
+				ul.nav.nav-sidebar
+					li.active
+						a(href='#')
+							| Overview 
+							span.sr-only (current)
+					li
+						a(href='#') Reports
+					li
+						a(href='#') Analytics
+					li
+						a(href='#') Export
+				ul.nav.nav-sidebar
+					li
+						a(href='') Nav item
+					li
+						a(href='') Nav item again
+					li
+						a(href='') One more nav
+					li
+						a(href='') Another nav item
+					li
+						a(href='') More navigation
+				ul.nav.nav-sidebar
+					li
+						a(href='') Nav item again
+					li
+						a(href='') One more nav
+					li
+						a(href='') Another nav item
+			.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+				h1.page-header Dashboard
+				.row.placeholders
+					.col-xs-6.col-sm-3.placeholder
+						img.img-responsive(src='/images/dashboard_blue.jpg', alt='Generic placeholder thumbnail')
+						h4 Label
+						span.text-muted Something else
+					.col-xs-6.col-sm-3.placeholder
+						img.img-responsive(src='/images/dashboard_green.jpg', alt='Generic placeholder thumbnail')
+						h4 Label
+						span.text-muted Something else
+					.col-xs-6.col-sm-3.placeholder
+						img.img-responsive(src='/images/dashboard_blue.jpg', alt='Generic placeholder thumbnail')
+						h4 Label
+						span.text-muted Something else
+					.col-xs-6.col-sm-3.placeholder
+						img.img-responsive(src='/images/dashboard_green.jpg', alt='Generic placeholder thumbnail')
+						h4 Label
+						span.text-muted Something else
+				h2.sub-header Section title
+				.table-responsive
+					table.table.table-striped
+						thead
+							tr
+								th #
+								th Header
+								th Header
+								th Header
+								th Header
+						tbody
+							tr
+								td 1,001
+								td Lorem
+								td ipsum
+								td dolor
+								td sit
+							tr
+								td 1,002
+								td amet
+								td consectetur
+								td adipiscing
+								td elit
+							tr
+								td 1,003
+								td Integer
+								td nec
+								td odio
+								td Praesent
+							tr
+								td 1,003
+								td libero
+								td Sed
+								td cursus
+								td ante
+							tr
+								td 1,004
+								td dapibus
+								td diam
+								td Sed
+								td nisi
+							tr
+								td 1,005
+								td Nulla
+								td quis
+								td sem
+								td at
+							tr
+								td 1,006
+								td nibh
+								td elementum
+								td imperdiet
+								td Duis
+							tr
+								td 1,007
+								td sagittis
+								td ipsum
+								td Praesent
+								td mauris
+							tr
+								td 1,008
+								td Fusce
+								td nec
+								td tellus
+								td sed
+							tr
+								td 1,009
+								td augue
+								td semper
+								td porta
+								td Mauris
+							tr
+								td 1,010
+								td massa
+								td Vestibulum
+								td lacinia
+								td arcu
+							tr
+								td 1,011
+								td eget
+								td nulla
+								td Class
+								td aptent
+							tr
+								td 1,012
+								td taciti
+								td sociosqu
+								td ad
+								td litora
+							tr
+								td 1,013
+								td torquent
+								td per
+								td conubia
+								td nostra
+							tr
+								td 1,014
+								td per
+								td inceptos
+								td himenaeos
+								td Curabitur
+							tr
+								td 1,015
+								td sodales
+								td ligula
+								td in
+								td libero

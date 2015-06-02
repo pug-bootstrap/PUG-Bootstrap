@@ -1,0 +1,63 @@
+//- Input control with form-group wrapper
+mixin input(type,id,placeholder,label)
+	.form-group
+		label(for="#{id}") #{label}
+		input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+
+//- Simple form input control without a form-group		
+mixin input-simple(type,id,placeholder,label)
+	input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+
+//- Checkbox - Block style
+mixin checkbox(text)
+	.checkbox
+		label
+			input(type="checkbox")
+			= text
+
+//- Checkbox - Inline style			
+mixin checkbox-inline(text)
+	.checkbox-inline
+		input(type="checkbox")
+		= text
+
+//- Radio box
+mixin radio(text)
+	.radio
+		label
+			input(type="radio")
+			= text
+
+//- Radio box - Inline style
+mixin radio-inline(text)
+	.radio-inline
+		input(type="radio")
+		= text
+
+//- Submit button
+mixin submit(text)
+	.form-group
+		button.btn.btn-default(type="submit")= text
+
+//- Input group - both prepend and append options available, and block is passed
+mixin input-group(prepend,append)
+	.form-group
+		.input-group
+			unless !prepend
+				.input-group-addon
+					= prepend
+			block
+			unless !append
+				.input-group-addon
+					= append
+
+//- Icon button
+mixin icon-btn(icon)
+	button.btn.btn-default(type="button",aria-label="#{icon}")
+		+icon(icon)
+		
+
+	
+//- Badges
+mixin badge(text)
+	span.badge= text

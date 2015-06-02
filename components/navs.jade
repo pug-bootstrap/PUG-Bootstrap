@@ -1,0 +1,32 @@
+//- Nav mixins
+mixin nav(type,items,active)
+	ul.nav(class="#{type}")
+		each item,index in items
+			if(index === active)
+				li.active(role="presentation")
+					a(href="#{item.href}")= item.text
+			else
+				li(role="presentation")
+					a(href="#{item.href}")= item.text
+					
+					
+mixin nav-tabs(items,active)
+	+nav("nav-tabs",items,active)
+	
+			
+
+mixin nav-tabs-justified(items,active)
+	+nav("nav-tabs nav-justified",items,active)
+	
+
+mixin nav-pills(items,active)
+	+nav("nav-pills",items,active)
+				
+					
+mixin nav-pills-justified(items,active)
+	+nav("nav-pills nav-justified",items,active)
+	
+
+mixin nav-stacked(items,active)
+	+nav("nav-pills nav-stacked",items,active)
+	

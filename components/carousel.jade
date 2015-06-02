@@ -1,10 +1,13 @@
 //- carousel caption
 mixin carousel-caption(item)
 	.carousel-caption
-		h1 #{item.h1}
-		p #{item.p}
-		p
-			a.btn.btn-lg.btn-primary(href="#{item.button.url}" role="button") #{item.button.caption}
+		unless !item.h1
+			h1 #{item.h1}
+		unless !item.p
+			p #{item.p}
+		unless !item.button
+			p
+				a.btn.btn-lg.btn-primary(href="#{item.button.url}" role="button") #{item.button.caption}
 
 //- carousel
 mixin carousel(id,items)

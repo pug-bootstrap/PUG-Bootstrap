@@ -240,9 +240,10 @@
               <li><span aria-hidden="true" class="glyphicon glyphicon-ban-circle"></span><span class="glyphicon-class">+icon("ban-circle")</span>
               </li>
             </ul>
-          </div><br><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+          </div><br><span aria-hidden="true" class="glyphicon glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-primary glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-info glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-warning glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-danger glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-success glyphicon-search"></span>
+          <p></p>
           <div class="highlight">
-            <pre><code data-lang="jade" class="language-jade"> +icon("search")</code></pre>
+            <pre><code data-lang="jade" class="language-jade">+icon("search")<br>+icon-primary("search")<br>+icon-info("search")<br>+icon-warning("search")<br>+icon-danger("search")<br>+icon-success("search")</code></pre>
           </div>
           <h3>Alerts</h3>
           <hr>
@@ -259,6 +260,7 @@
           </div>
           <div class="highlight">
             <pre><code data-lang="jade" class="language-jade"> +alert-info("This is an info alert")
+ +alert-info("&lt;strong>Well done!&lt;/strong> You successfully read this important alert message.")
  +alert-danger("This is a danger alert")
  +alert-success("This is a success alert")
  +alert-warning("This is a warning alert")</code></pre>
@@ -395,6 +397,18 @@
               </div>
             </div>
           </form><br>
+          <div class="highlight">
+            <pre><code> +input("text","txtName","Name","Name")
+ +checkbox("Check me out")
+ +radio("My Radio Button")
+ +submit("Register")
+ +input-group("$","%")
+   +input-simple("text","txtName","Name","Name")
+ +input-group("$")
+   +input-simple("text","txtName","Name","Name")
+ +input-group("","%")
+   +input-simple("text","txtName","Name","Name")</code></pre>
+          </div>
           <h3>Checkboxes - Inline</h3>
           <div class="checkbox-inline">
             <input type="checkbox"/>1
@@ -439,37 +453,60 @@
 +label-warning("Warning")
 +label-danger("Danger")</code></pre>
           </div>
-          <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a>
+          <h2>Badges</h2><a href="#">Inbox  <span class="badge">42</span></a><br>
+          <div class="highlight">
+            <pre><code> +badge("42")</code></pre>
+          </div>
           <h2>Nav-Tabs</h2>
           <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Message</a></li>
-          </ul>
+          </ul><br>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+nav-tabs([{text:"Home",href:"#"},{text:"Profile",href:"#"},{text:"Message",href:"#"}],0)</code></pre>
+          </div>
           <h2>Nav-Tabs Justified</h2>
           <ul class="nav nav-tabs nav-justified">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Message</a></li>
           </ul>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+nav-tabs-justified([{text:"Home",href:"#"},{text:"Profile",href:"#"},{text:"Message",href:"#"}],0)</code></pre>
+          </div>
           <h2>Nav-Pills</h2>
           <ul class="nav nav-pills">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Message</a></li>
           </ul>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+nav-pills([{text:"Home",href:"#"},{text:"Profile",href:"#"},{text:"Message",href:"#"}],0)</code></pre>
+          </div>
           <h2>Nav-Pills Justified</h2>
           <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Message</a></li>
           </ul>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+nav-pills-justified([{text:"Home",href:"#"},{text:"Profile",href:"#"},{text:"Message",href:"#"}],0)</code></pre>
+          </div>
           <h2>Nav-Stacked</h2>
           <ul class="nav nav-pills nav-stacked">
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Message</a></li>
           </ul>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+nav-stacked([{text:"Home",href:"#"},{text:"Profile",href:"#"},{text:"Message",href:"#"}],0)</code></pre>
+          </div>
           <h2>Tabs</h2>
           <ul role="tablist" class="nav nav-tabs">
             <li class="active"><a href="#tabHome" role="tab" data-toggle="tab">Home</a></li>
@@ -773,6 +810,10 @@
           </button>
           <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="btn btn-danger">Single toggle
           </button>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+toggle-primary("Single toggle")<br>+toggle-default("Single toggle")<br>+toggle-info("Single toggle")<br>+toggle-success("Single toggle")<br>+toggle-warning("Single toggle")<br>+toggle-danger("Single toggle")<br></code></pre>
+          </div>
           <h3>Checkboxes</h3>
           <div data-toggle="buttons" class="btn-group">
             <label class="btn active btn-primary">
@@ -785,7 +826,86 @@
               <input type="checkbox" autocomplete="off"/> Checkbox3
             </label>
           </div>
-          <h3>Radio Buttons</h3>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-primary([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-info">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-info">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-info">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-info([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-success">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-success">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-success">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-success([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-warning">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-warning">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-warning">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-warning([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-danger">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-danger">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-danger">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-danger([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-default">
+              <input type="checkbox" autocomplete="off" checked="checked"/> Checkbox1
+            </label>
+            <label class="btn btn-default">
+              <input type="checkbox" autocomplete="off"/> Checkbox2
+            </label>
+            <label class="btn btn-default">
+              <input type="checkbox" autocomplete="off"/> Checkbox3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+checkbox-toggle-default([{caption:"Checkbox1"},{caption:"Checkbox2"},{caption:"Checkbox3"}],0)</code></pre>
+          </div>
+          <h3>Radio toggle</h3>
           <div data-toggle="buttons" class="btn-group">
             <label class="btn active btn-primary">
               <input type="radio" name="radOptions" autocomplete="off" checked="checked"/> Radio1
@@ -797,7 +917,87 @@
               <input type="radio" name="radOptions" autocomplete="off"/> Radio3
             </label>
           </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-primary("radOptions",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-info">
+              <input type="radio" name="radOptions2" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-info">
+              <input type="radio" name="radOptions2" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-info">
+              <input type="radio" name="radOptions2" autocomplete="off"/> Radio3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-info("radOptions2",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-success">
+              <input type="radio" name="radOptions3" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-success">
+              <input type="radio" name="radOptions3" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-success">
+              <input type="radio" name="radOptions3" autocomplete="off"/> Radio3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-success("radOptions3",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-warning">
+              <input type="radio" name="radOptions4" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-warning">
+              <input type="radio" name="radOptions4" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-warning">
+              <input type="radio" name="radOptions4" autocomplete="off"/> Radio3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-warning("radOptions4",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-danger">
+              <input type="radio" name="radOptions5" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-danger">
+              <input type="radio" name="radOptions5" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-danger">
+              <input type="radio" name="radOptions5" autocomplete="off"/> Radio3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-danger("radOptions5",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
+          <div data-toggle="buttons" class="btn-group">
+            <label class="btn active btn-default">
+              <input type="radio" name="radOptions6" autocomplete="off" checked="checked"/> Radio1
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="radOptions6" autocomplete="off"/> Radio2
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="radOptions6" autocomplete="off"/> Radio3
+            </label>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+radio-toggle-default("radOptions6",[{caption:"Radio1"},{caption:"Radio2"},{caption:"Radio3"}],0)</code></pre>
+          </div>
           <h3>Tables</h3>
+          <h4>Tables - Default</h4>
           <table class="table">
             <thead>
               <tr>
@@ -828,6 +1028,11 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])</code></pre>
+          </div>
+          <h4>Tables - Striped</h4>
           <table class="table table-striped">
             <thead>
               <tr>
@@ -858,6 +1063,11 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table-striped(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])</code></pre>
+          </div>
+          <h4>Tables - Bordered</h4>
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -888,6 +1098,11 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table-bordered(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])</code></pre>
+          </div>
+          <h4>Tables - Hover</h4>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -918,6 +1133,11 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table-hover(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])</code></pre>
+          </div>
+          <h4>Tables - Condensed</h4>
           <table class="table table-condensed">
             <thead>
               <tr>
@@ -948,6 +1168,11 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table-condensed(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])</code></pre>
+          </div>
+          <h4>Tables - Custom Styles</h4>
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -978,6 +1203,10 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]],"table-striped table-bordered")</code></pre>
+          </div>
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -1004,6 +1233,10 @@
               </tr>
             </tbody>
           </table>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+table([],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]],"table-striped table-bordered")</code></pre>
+          </div>
           <h3>List groups</h3>
           <h4>Simple list groups</h4>
           <div class="col-md-4">
@@ -1014,11 +1247,20 @@
             <li class="list-group-item">Cras justo odio</li>
             <li class="list-group-item">Cras justo odio</li>
           </div>
+          <div class="clearfix"></div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+list-group(["Cras justo odio","Cras justo odio","Cras justo odio","Cras justo odio","Cras justo odio"])</code></pre>
+          </div>
           <h4>List group with links</h4>
           <div class="col-md-4">
             <div class="list-group"></div><a href="#" class="list-group-item active">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Cras justo odio</a>
           </div>
           <div class="clearfix"></div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+list-group-links([{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},],0)</code></pre>
+          </div>
           <h4>Custom list group</h4>
           <div class="list-group"><a href="#" class="list-group-item active">
               <h4 class="list-group-item-heading">List group item heading</h4>
@@ -1027,6 +1269,122 @@
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item">
               <h4 class="list-group-item-heading">List group item heading</h4>
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+list-group-custom()<br>  +list-group-item("#","true")<br>    h4.list-group-item-heading List group item heading<br>    p.list-group-item-text<br>      | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.<br><br>  +list-group-item("#")<br>    h4.list-group-item-heading List group item heading<br>    p.list-group-item-text<br>      | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.<br><br>  +list-group-item("#")<br>    h4.list-group-item-heading List group item heading<br>    p.list-group-item-text<br>      | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.<br></code></pre>
+          </div>
+          <h2>Progress bars</h2>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-"><span class="sr-only">60% Complete</span></div>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+progress-bar(60)</code></pre>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;" class="progress-bar progress-bar-info"><span class="sr-only">20% Complete</span></div>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+progress-bar-info(20)</code></pre>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-warning"><span class="sr-only">60% Complete</span></div>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+progress-bar-warning(60)</code></pre>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-danger"><span class="sr-only">80% Complete</span></div>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+progress-bar-danger(80)</code></pre>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-striped"><span class="sr-only">60% Complete</span></div>
+          </div>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+progress-bar-striped(60)</code></pre>
+          </div>
+          <div class="progress">
+            <div style="width: 35%" class="progress-bar progress-bar-success"><span class="sr-only">35% Complete (success)</span></div>
+            <div style="width: 20%" class="progress-bar progress-bar-warning"><span class="sr-only">20% Complete (warning)</span></div>
+            <div style="width: 10%" class="progress-bar progress-bar-danger"><span class="sr-only">10% Complete (danger)</span></div>
+          </div>
+          <h2>Navbars</h2>
+          <nav role="navigation" class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Project name</a>
+            </div>
+            <div id="dropdown_menu" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+              </ul>
+            </div>
+          </nav>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+navbar("Project name","dropdown_menu")</code></pre>
+          </div>
+          <nav role="navigation" class="navbar navbar-inverse">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Project name</a>
+            </div>
+            <div id="dropdown_menu" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+              </ul>
+            </div>
+          </nav>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+navbar("Project name","dropdown_menu","inverse")</code></pre>
+          </div>
+          <nav role="navigation" class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Project name</a>
+            </div>
+            <div id="dropdown_menu" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+navbar("Project name","dropdown_menu")<br>  +nav_item("index.html","active") Home<br>  +nav_item("index.html") About<br>  +nav_item("index.html") Contact<br></code></pre>
+          </div>
+          <nav role="navigation" class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Project name</a>
+            </div>
+            <div id="dropdown_menu" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Dropdown<span class="caret"></span></a>
+                  <ul role="menu" class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another Action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header
+                    </li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <p></p>
+          <div class="highlight">
+            <pre><code data-lang="jade" class="language-jade">+navbar("Project name","dropdown_menu")<br>  +nav_item("index.html","active") Home<br>  +nav_item("about.html") About<br>  +nav_item("contact.html") Contact<br>  +nav_item_dropdown("#")(label="Dropdown")<br>    +nav_item("#") Action<br>    +nav_item("#") Another Action<br>    +nav_item("#") Something else here<br>    +nav_divider<br>    +nav_header Nav header<br>    +nav_item("#") Separated link<br>    +nav_item("#") One more separated link</code></pre>
           </div>
         </div>
       </div>

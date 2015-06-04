@@ -31,8 +31,8 @@ mixin toggle-warning(text)
 mixin toggle-danger(text)
 	+toggle("danger",text)
 
-//- checkbox button group
-mixin checkbox-buttons(type,items,active)
+//- checkbox toggle group
+mixin checkbox-toggle(type,items,active)
 	.btn-group(data-toggle="buttons")
 		each item,index in items
 			if(index === active)
@@ -44,13 +44,33 @@ mixin checkbox-buttons(type,items,active)
 					input(type="checkbox",autocomplete="off") 
 					|  #{item.caption}
 
-//- checkbox-buttons-primary
-mixin checkbox-buttons-primary(items,active)
-	+checkbox-buttons("primary",items,active)
+//- checkbox-toggle-primary
+mixin checkbox-toggle-primary(items,active)
+	+checkbox-toggle("primary",items,active)
+
+//- checkbox-toggle-info
+mixin checkbox-toggle-info(items,active)
+	+checkbox-toggle("info",items,active)
+	
+//- checkbox-toggle-success
+mixin checkbox-toggle-success(items,active)
+	+checkbox-toggle("success",items,active)
+	
+//- checkbox-toggle-warning
+mixin checkbox-toggle-warning(items,active)
+	+checkbox-toggle("warning",items,active)
+	
+//- checkbox-toggle-danger
+mixin checkbox-toggle-danger(items,active)
+	+checkbox-toggle("danger",items,active)
+	
+//- checkbox-toggle-default
+mixin checkbox-toggle-default(items,active)
+	+checkbox-toggle("default",items,active)
 	
 
-//- radio button group
-mixin radio-buttons(type,name,items,active)
+//- radio toggle group
+mixin radio-toggle(type,name,items,active)
 	.btn-group(data-toggle="buttons")
 		each item,index in items
 			if(index === active)
@@ -62,6 +82,28 @@ mixin radio-buttons(type,name,items,active)
 					input(type="radio",name="#{name}",autocomplete="off") 
 					|  #{item.caption}
 
-//- checkbox-buttons-primary
-mixin radio-buttons-primary(name,items,active)
-	+radio-buttons("primary",name,items,active)
+//- radio-toggle-primary
+mixin radio-toggle-primary(name,items,active)
+	+radio-toggle("primary",name,items,active)
+
+//- radio-toggle-info
+mixin radio-toggle-info(name,items,active)
+	+radio-toggle("info",name,items,active)
+	
+//- radio-toggle-success
+mixin radio-toggle-success(name,items,active)
+	+radio-toggle("success",name,items,active)
+	
+//- radio-toggle-warning
+mixin radio-toggle-warning(name,items,active)
+	+radio-toggle("warning",name,items,active)
+	
+//- radio-toggle-danger
+mixin radio-toggle-danger(name,items,active)
+	+radio-toggle("danger",name,items,active)
+	
+//- radio-toggle-default
+mixin radio-toggle-default(name,items,active)
+	+radio-toggle("default",name,items,active)
+	
+

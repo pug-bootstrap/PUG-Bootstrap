@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>JADE-Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--link(rel="stylesheet",href="css/bootstrap.min.css")-->
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">JADE-Bootstrap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="getting-started.html">Getting Started</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active"><a href="#">Comparison</a></li>
+            <li><a href="jade_converter.html">JADE Converter</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-md-12">
+          <h2>Carousel</h2>
+          <div class="col-md-6">
+            <h3 class="text-center">HTML</h3>
+            <div id="carousel_html" class="editor">
+               &lt;div id="carousel-example-generic" class="carousel slide" data-ride="carousel"&gt;
+                 &lt;!-- Indicators --&gt;
+                 &lt;ol class="carousel-indicators"&gt;
+              	&lt;li data-target="#carousel-example-generic" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+              	&lt;li data-target="#carousel-example-generic" data-slide-to="1"&gt;&lt;/li&gt;
+              	&lt;li data-target="#carousel-example-generic" data-slide-to="2"&gt;&lt;/li&gt;
+               &lt;/ol&gt;
+               &lt;!-- Wrapper for slides --&gt;
+               &lt;div class="carousel-inner" role="listbox"&gt;
+              	&lt;div class="item active"&gt;
+              	  &lt;img src="..." alt="..."&gt;
+              	  &lt;div class="carousel-caption"&gt;
+              		...
+              	  &lt;/div&gt;
+              	&lt;/div&gt;
+              	&lt;div class="item"&gt;
+              	  &lt;img src="..." alt="..."&gt;
+              	  &lt;div class="carousel-caption"&gt;
+              		...
+              	  &lt;/div&gt;
+              	&lt;/div&gt;
+              	...
+               &lt;/div&gt;
+               &lt;!-- Controls --&gt;
+               &lt;a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"&gt;
+              	&lt;span class="glyphicon glyphicon-chevron-left" aria-hidden="true"&gt;&lt;/span&gt;
+              	&lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+               &lt;/a&gt;
+               &lt;a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"&gt;
+              	&lt;span class="glyphicon glyphicon-chevron-right" aria-hidden="true"&gt;&lt;/span&gt;
+              	&lt;span class="sr-only"&gt;Next&lt;/span&gt;
+               &lt;/a&gt;
+               &lt;/div&gt;</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center">JADE-BOOTSTRAP</h3>
+            <div id="carousel_jade" class="editor">
+              +carousel("sample",[
+              	{image:"images/slide1.jpg",caption:"Carousel Caption #1"},
+              	{image:"images/slide2.jpg",caption:"Carousel Caption #2"},
+              	{image:"images/slide3.jpg",caption:"Carousel Caption #3"},
+              	{image:"images/slide4.jpg",caption:"Carousel Caption #4"}
+              ])</div>
+          </div>
+          <div class="clearfix"></div>
+          <h2>Accordion</h2>
+          <div class="col-md-6">
+            <h3 class="text-center">HTML</h3>
+            <div id="accordion_html" class="editor">
+               &lt;div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"&gt;
+                 &lt;div class="panel panel-default"&gt;
+               &lt;div class="panel-heading" role="tab" id="headingOne"&gt;
+                     &lt;h4 class="panel-title"&gt;
+                       &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
+                         Collapsible Group Item #1
+                       &lt;/a&gt;
+                     &lt;/h4&gt;
+                   &lt;/div&gt;
+                   &lt;div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"&gt;
+                     &lt;div class="panel-body"&gt;
+                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                     &lt;/div&gt;
+                 &lt;/div&gt;
+                 &lt;/div&gt;
+                 &lt;div class="panel panel-default"&gt;
+                   &lt;div class="panel-heading" role="tab" id="headingTwo"&gt;
+                     &lt;h4 class="panel-title"&gt;
+                       &lt;a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
+                         Collapsible Group Item #2
+                       &lt;/a&gt;
+                     &lt;/h4&gt;
+                   &lt;/div&gt;
+                   &lt;div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"&gt;
+                     &lt;div class="panel-body"&gt;
+                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                     &lt;/div&gt;
+                   &lt;/div&gt;
+                 &lt;/div&gt;
+                 &lt;div class="panel panel-default"&gt;
+                   &lt;div class="panel-heading" role="tab" id="headingThree"&gt;
+                     &lt;h4 class="panel-title"&gt;
+                       &lt;a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
+                         Collapsible Group Item #3
+                       &lt;/a&gt;
+                     &lt;/h4&gt;
+                   &lt;/div&gt;
+                   &lt;div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree"&gt;
+                     &lt;div class="panel-body"&gt;
+                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                     &lt;/div&gt;
+                   &lt;/div&gt;
+                 &lt;/div&gt;
+               &lt;/div&gt;</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center">JADE-BOOTSTRAP</h3>
+            <div id="accordion_jade" class="editor">
+              +accordion("sample")
+              	+accordion-item-default("Collapsible Group Item #1","sample","true")
+              		|  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              	+accordion-item-default("Collapsible Group Item #2","sample")
+              		|  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              	+accordion-item-default("Collapsible Group Item #3","sample")
+              		|  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          </div>
+          <div class="clearfix"></div>
+          <h2>Tabs</h2>
+          <div class="col-md-6">
+            <h3 class="text-center">HTML</h3>
+            <div id="tabs_html" class="editor">
+               &lt;div role="tabpanel"&gt;
+               
+                 &lt;!-- Nav tabs --&gt;
+                 &lt;ul class="nav nav-tabs" role="tablist"&gt;
+                   &lt;li role="presentation" class="active"&gt;&lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                   &lt;li role="presentation"&gt;&lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                   &lt;li role="presentation"&gt;&lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+                   &lt;li role="presentation"&gt;&lt;a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+               
+                 &lt;!-- Tab panes --&gt;
+                 &lt;div class="tab-content"&gt;
+                   &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+                   &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+                   &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;...&lt;/div&gt;
+                   &lt;div role="tabpanel" class="tab-pane" id="settings"&gt;...&lt;/div&gt;
+                 &lt;/div&gt;
+               
+               &lt;/div&gt;</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center">JADE-BOOTSTRAP</h3>
+            <div id="tabs_jade" class="editor">
+               +tab-list(["Home","Profile","Messages","Settings"],0)
+              	+tab("Home","active")
+              		h1 Home
+              		p This is Home tab
+              	+tab("Profile")
+              		h1 Profile
+              		p This is Profile tab
+              	+tab("Messages")
+              		h1 Messages
+              		p This is Messages tab
+              	+tab("Settings")
+              		h1 Settings
+              		p This is Settings tab</div>
+          </div>
+          <div class="clearfix"></div>
+          <h2>Modal</h2>
+          <div class="col-md-6">
+            <h3 class="text-center">HTML</h3>
+            <div id="modal_html" class="editor">
+               &lt;!-- Button trigger modal --&gt;
+               &lt;button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"&gt;
+                 Launch demo modal
+               &lt;/button&gt;
+               
+               &lt;!-- Modal --&gt;
+               &lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+                 &lt;div class="modal-dialog"&gt;
+                   &lt;div class="modal-content"&gt;
+                     &lt;div class="modal-header"&gt;
+                       &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+                       &lt;h4 class="modal-title" id="myModalLabel"&gt;Modal title&lt;/h4&gt;
+                     &lt;/div&gt;
+                     &lt;div class="modal-body"&gt;
+                       ...
+                     &lt;/div&gt;
+                     &lt;div class="modal-footer"&gt;
+                       &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                       &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                     &lt;/div&gt;
+                   &lt;/div&gt;
+                 &lt;/div&gt;
+               &lt;/div&gt;</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center">JADE-BOOTSTRAP</h3>
+            <div id="modal_jade" class="editor">
+               button.btn.btn-primary(data-toggle="modal",data-target="#myModal") Launch demo modal
+               +modal("Modal title","myModal")
+              	p This is modal content</div>
+          </div>
+          <div class="clearfix"></div>
+          <h2>Panels</h2>
+          <div class="col-md-6">
+            <h3 class="text-center">HTML</h3>
+            <div id="panel_html" class="editor">
+               &lt;div class="panel panel-default"&gt;
+                 &lt;div class="panel-heading"&gt;
+                   &lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+                 &lt;/div&gt;
+                 &lt;div class="panel-body"&gt;
+                   Panel content
+                 &lt;/div&gt;
+               &lt;/div&gt;</div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center">JADE-BOOTSTRAP</h3>
+            <div id="panel_jade" class="editor">
+               +panel-default("Default Panel")
+               	  p This is default panel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <hr>
+      <div class="container">
+        <ul class="jb-social-buttons">
+          <li>
+            <iframe src="http://ghbtns.com/github-btn.html?user=rajasegar&amp;repo=JADE-Bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" class="github-btn"></iframe>
+          </li>
+          <li>
+            <iframe src="http://ghbtns.com/github-btn.html?user=rajasegar&amp;repo=JADE-Bootstrap&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px" class="github-btn"></iframe>
+          </li>
+          <li><a href="https://twitter.com/rajasegar_c" class="twitter-follow-button" data-show-count="true">Follow @rajasegar_c</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              
+            </script>
+          </li>
+          <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="rajasegar_c">Tweet</a></li>
+        </ul>
+        <p> Designed and built with all the love in the world by <a href="https://twitter.com/rajasegar_c">@rajasegar_c</a>.</p>
+        <p> Maintained by <a href="https://github.com/rajasegar">Rajasegar Chandiran</a></p>
+        <p> Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a></p>
+        <ul class="jb-social-buttons">
+          <li>Currently v0.0.1</li>
+          <li><a href="https://github.com/rajasegar/JADE-Bootstrap">GitHub</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="credits.html">Credits</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--script(src="js/jquery.min.js")-->
+    <!--script(src="js/bootstrap.min.js")-->
+    <script src="js/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
+    <script src="js/comparison.min.js"></script>
+  </body>
+</html>

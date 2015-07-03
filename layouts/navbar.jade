@@ -1,4 +1,4 @@
-extends ../bootstrap
+extends ../_bootstrap
 append styles
 	// Custom styles for this template
 	link(href='../css/navbar.css', rel='stylesheet')
@@ -41,13 +41,13 @@ block body
 									a(href='#') One more separated link
 					ul.nav.navbar-nav.navbar-right
 						li.active
-							a(href='./')
+							a(href='#')
 								| Default 
 								span.sr-only (current)
 						li
-							a(href='../navbar-static-top/') Static top
+							a(href='navbar-static.html') Static top
 						li
-							a(href='../navbar-fixed-top/') Fixed top
+							a(href='navbar-fixed.html') Fixed top
 
 		// Main component for a primary marketing message or call to action
 		.jumbotron

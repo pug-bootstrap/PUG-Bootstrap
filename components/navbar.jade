@@ -2,36 +2,65 @@
 //- https://github.com/tutsplus/baking-bootstrap-snippets-with-jade
 //- Author:  http://tutsplus.com/authors/kezz-bracey
 mixin navbar(name, id, style)
-    - var style = (typeof style === 'undefined') ? "default" : style
-    nav( role="navigation", class=["navbar", "navbar-" + style] )
-        .navbar-header
-            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href="#")= name
- 
-        .collapse.navbar-collapse( id=id )
-            ul.nav.navbar-nav
-                block
- 
+	- var style = (typeof style === 'undefined') ? "default" : style
+	nav( role="navigation", class=["navbar", "navbar-" + style] )
+		.navbar-header
+			button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href="#")= name
+
+		.collapse.navbar-collapse( id=id )
+			ul.nav.navbar-nav
+				block
+
 mixin nav_item(href, active)
-    li(class=active): a( href=href )
-        block
- 
+	li(class=active): a( href=href )
+		block
+
 mixin nav_item_dropdown(href, active)
-    li(class=["dropdown", active])
-        a.dropdown-toggle( href=href, data-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
-            span.caret
-        ul.dropdown-menu( role="menu" )
-            block
- 
+	li(class=["dropdown", active])
+		a.dropdown-toggle( href=href, data-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
+			span.caret
+		ul.dropdown-menu( role="menu" )
+				block
+
 mixin nav_divider
-    li.divider
- 
+	li.divider
+
 mixin nav_header
-    li.dropdown-header
-        block
- 
+	li.dropdown-header
+		block
+
+mixin navbar-fixed(name,id,style)
+	- var style = (typeof style === 'undefined') ? "default" : style
+	nav( role="navigation", class=["navbar","navbar-fixed-top","navbar-" + style] )
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#' + id, aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Project name
+			.collapse.navbar-collapse( id=id )
+				ul.nav.navbar-nav
+					block
+
+mixin navbar-static(name,id,style)
+	- var style = (typeof style === 'undefined') ? "default" : style
+	nav( role="navigation", class=["navbar","navbar-static-top","navbar-" + style] )
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#' + id, aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Project name
+			.collapse.navbar-collapse( id=id )
+				ul.nav.navbar-nav
+					block
 //- End navbar mixins

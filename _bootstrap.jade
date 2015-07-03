@@ -36,6 +36,12 @@ include components/modal
 include components/list-groups
 //- Including Progress bar mixins
 include components/progress-bars
+//- Including Button mixins
+include components/buttons
+//- Including Image mixins
+include components/images
+//- Including Bootswatch theme mixins
+include components/bootswatch
 
 doctype html
 html(lang="en")
@@ -49,10 +55,12 @@ html(lang="en")
 		title= title
 		block styles
 			link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-	body
+			//link(rel="stylesheet",href="css/bootstrap.min.css")
+	body(data-spy="scroll",data-target=".scrollspy")
 		block body
 			
 		block scripts
 			script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
 			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
-
+			//script(src="js/jquery.min.js")
+			//script(src="js/bootstrap.min.js")

@@ -1,4 +1,4 @@
-extends ../bootstrap
+extends ../_bootstrap
 append styles
 	// Custom styles for this template 
 	link(href="../css/carousel.css", rel="stylesheet")
@@ -43,7 +43,7 @@ block body
 							
 	// Carousel
 	// ==================================================
-	+carousel("myCarousel",[{image:"/images/carousel1.jpg",h1:"Example headline",p:"Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",button:{caption:"Sign up today",url:"#"}},{image:"/images/carousel2.jpg",h1:"Another example headline",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Learn more",url:"#"}},	{image:"/images/carousel3.jpg",h1:"One more for good measure.",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Browse gallery",url:"#"}}])
+	+carousel("myCarousel",[{image:"../images/carousel1.jpg",h1:"Example headline",p:"Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",button:{caption:"Sign up today",url:"#"}},{image:"../images/carousel2.jpg",h1:"Another example headline",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Learn more",url:"#"}},	{image:"../images/carousel3.jpg",h1:"One more for good measure.",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Browse gallery",url:"#"}}])
 	//  Marketing messaging and featurettes
 	//  ==================================================
 	// Wrap the rest of the page in another container to center all the content.
@@ -51,21 +51,21 @@ block body
 		// Three columns of text below the carousel
 		.row
 			.col-lg-4
-				img.img-circle(src='/images/marketing1.jpg', alt='Generic placeholder image', width='140', height='140')
+				img.img-circle(src='../images/marketing1.jpg', alt='Generic placeholder image', width='140', height='140')
 				h2 Heading
 				p
 					| Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
 				p
 					a.btn.btn-default(href='#', role='button') View details »
 			.col-lg-4
-				img.img-circle(src='/images/marketing2.jpg', alt='Generic placeholder image', width='140', height='140')
+				img.img-circle(src='../images/marketing2.jpg', alt='Generic placeholder image', width='140', height='140')
 				h2 Heading
 				p
 					| Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
 				p
 					a.btn.btn-default(href='#', role='button') View details »
 			.col-lg-4
-				img.img-circle(src='/images/marketing3.jpg', alt='Generic placeholder image', width='140', height='140')
+				img.img-circle(src='../images/marketing3.jpg', alt='Generic placeholder image', width='140', height='140')
 				h2 Heading
 				p
 					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -81,7 +81,7 @@ block body
 				p.lead
 					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 			.col-md-5
-				img.featurette-image.img-responsive.center-block(src='/images/featurette1.jpg', alt='Generic placeholder image')
+				img.featurette-image.img-responsive.center-block(src='../images/featurette1.jpg', alt='Generic placeholder image')
 		hr.featurette-divider
 		.row.featurette
 			.col-md-7.col-md-push-5
@@ -91,7 +91,7 @@ block body
 				p.lead
 					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 			.col-md-5.col-md-pull-7
-				img.featurette-image.img-responsive.center-block(src='/images/featurette2.jpg', alt='Generic placeholder image')
+				img.featurette-image.img-responsive.center-block(src='../images/featurette2.jpg', alt='Generic placeholder image')
 		hr.featurette-divider
 		.row.featurette
 			.col-md-7
@@ -101,7 +101,7 @@ block body
 				p.lead
 					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 			.col-md-5
-				img.featurette-image.img-responsive.center-block(src='/images/featurette3.jpg', alt='Generic placeholder image')
+				img.featurette-image.img-responsive.center-block(src='../images/featurette3.jpg', alt='Generic placeholder image')
 		hr.featurette-divider
 		// /END THE FEATURETTES
 		// FOOTER

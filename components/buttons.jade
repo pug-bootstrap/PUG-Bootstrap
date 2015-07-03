@@ -1,0 +1,151 @@
+//- button mixins
+//- anchor buttons
+mixin a-btn(url,style)
+	- var type = (typeof style === 'undefined') ? "default" : style
+	a.btn(class="btn-#{type}",href="#{url}",role="button")
+		block
+
+mixin a-btn-primary(url)
+	+a-btn(url,"primary")
+		block
+	
+mixin a-btn-info(url)
+	+a-btn(url,"info")
+		block
+	
+mixin a-btn-warning(url)
+	+a-btn(url,"warning")
+		block
+	
+mixin a-btn-danger(url)
+	+a-btn(url,"danger")
+		block
+	
+mixin a-btn-success(url)
+	+a-btn(url,"success")
+		block
+
+//- buttons
+mixin btn(caption,style,size)
+	- var type = (typeof style === 'undefined') ? "default" : style
+	unless size
+		button.btn(class="btn-#{type}",type="button")= caption
+	else
+		button.btn(class="btn-#{type} btn-#{size}",type="button")= caption
+
+
+mixin btn-primary(caption)
+	+btn(caption,"primary")
+	
+mixin btn-info(caption)
+	+btn(caption,"info")
+	
+mixin btn-warning(caption)
+	+btn(caption,"warning")
+	
+mixin btn-danger(caption)
+	+btn(caption,"danger")
+	
+mixin btn-success(caption)
+	+btn(caption,"success")
+
+//- Large buttons	
+mixin btn-lg(caption)
+	- var type = (typeof style === 'undefined') ? 'default' : style
+	+btn(caption,type,"lg")
+	
+mixin btn-lg-primary(caption)
+	+btn(caption,"primary","lg")
+	
+mixin btn-lg-info(caption)
+	+btn(caption,"info","lg")
+	
+mixin btn-lg-success(caption)
+	+btn(caption,"success","lg")
+	
+mixin btn-lg-warning(caption)
+	+btn(caption,"warning","lg")
+	
+mixin btn-lg-danger(caption)
+	+btn(caption,"danger","lg")
+	
+//- Small buttons	
+mixin btn-sm(caption)
+	- var type = (typeof style === 'undefined') ? 'default' : style
+	+btn(caption,type,"sm")
+	
+mixin btn-sm-primary(caption)
+	+btn(caption,"primary","sm")
+	
+mixin btn-sm-info(caption)
+	+btn(caption,"info","sm")
+	
+mixin btn-sm-success(caption)
+	+btn(caption,"success","sm")
+	
+mixin btn-sm-warning(caption)
+	+btn(caption,"warning","sm")
+	
+mixin btn-sm-danger(caption)
+	+btn(caption,"danger","sm")
+	
+//- Extra Small buttons	
+mixin btn-xs(caption)
+	- var type = (typeof style === 'undefined') ? 'default' : style
+	+btn(caption,type,"xs")
+	
+mixin btn-xs-primary(caption)
+	+btn(caption,"primary","xs")
+	
+mixin btn-xs-info(caption)
+	+btn(caption,"info","xs")
+	
+mixin btn-xs-success(caption)
+	+btn(caption,"success","xs")
+	
+mixin btn-xs-warning(caption)
+	+btn(caption,"warning","xs")
+	
+mixin btn-xs-danger(caption)
+	+btn(caption,"danger","xs")
+		
+//- input buttons
+mixin input-btn(caption,style)
+	- var type = (typeof style === 'undefined') ? "default" : style
+	input.btn(class="btn-#{type}",type="button",value="#{caption}")
+
+mixin input-btn-primary(caption)
+	+input-btn(caption,"primary")
+	
+mixin input-btn-info(caption)
+	+input-btn(caption,"info")
+	
+mixin input-btn-warning(caption)
+	+input-btn(caption,"warning")
+	
+mixin input-btn-danger(caption)
+	+input-btn(caption,"danger")
+	
+mixin input-btn-success(caption)
+	+input-btn(caption,"success")
+	
+//- submit buttons
+mixin submit(caption,style)
+	- var type = (typeof style === 'undefined') ? "default" : style
+	input.btn(class="btn-#{type}",type="submit",value="#{caption}")
+
+mixin submit-primary(caption)
+	+submit(caption,"primary")
+	
+mixin submit-info(caption)
+	+submit(caption,"info")
+	
+mixin submit-warning(caption)
+	+submit(caption,"warning")
+	
+mixin submit-danger(caption)
+	+submit(caption,"danger")
+	
+mixin submit-success(caption)
+	+submit(caption,"success")
+	

@@ -1,0 +1,27 @@
+extends ../_bootstrap
+append styles
+	// Custom styles for this template
+	link(href='../css/navbar-static-top.css', rel='stylesheet')
+block body
+	// Static navbar
+	+navbar-static("Project name","navbar")
+		+nav_item("#","active") Home
+		+nav_item("#") About
+		+nav_item("#") Contact
+		+nav_item_dropdown("#")(label="Dropdown")
+			+nav_item("#") Action
+			+nav_item("#") Another action
+			+nav_item("#") Something else here
+			+nav_divider
+			+nav_item("#") Separated link
+			+nav_item("#") One more separated link
+	.container
+		// Main component for a primary marketing message or call to action
+		.jumbotron
+			h1 Navbar example
+			p
+				| This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.
+			p To see the difference between static and fixed top navbars, just scroll.
+			p
+				a.btn.btn-lg.btn-primary(href='../../components/#navbar', role='button') View navbar docs »
+	

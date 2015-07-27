@@ -21,7 +21,7 @@
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">JADE-Bootstrap</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#">Getting Started</a></li>
@@ -74,24 +74,28 @@
             <pre><code> $ npm install jade-bootstrap</code></pre>
           </div>
           <h2>Basic template</h2>
-          <h4> Start with this basic HTML template, or modify these examples. We hope you'll customize our templates and examples, adapting them to suit your needs.</h4>
+          <h4> Start with this basic JADE template, or modify these examples. We hope you'll customize our templates and examples, adapting them to suit your needs.</h4>
           <p> Copy the JADE code below to begin working with a minimal JADE-Bootstrap document.</p>
           <div class="highlight">
             <pre><code>extends _bootstrap
 block body
-	h1 Put your own html body content here</code></pre>
+	h1 Put your own body content here</code></pre>
           </div>
           <h3>JADE-Bootstrap source code</h3>
           <div class="highlight">
-            <pre><code>bootstrap.jade
+            <pre><code>_bootstrap.jade
 components/
   |---accordion.jade
   |---alerts.jade
+  |---bootswatch.jade
+  |---buttons.jade
   |---carousel.jade
   |---dropdowns.jade
   |---forms.jade
   |---icons.jade
+  |---images.jade
   |---labels.jade
+  |---list-groups.jade
   |---modal.jade
   |---navbar.jade
   |---navs.jade
@@ -99,7 +103,26 @@ components/
   |---tables.jade
   |---tabs.jade
   |---toggle.jade
-  |---tooltips.jade</code></pre>
+  |---tooltips.jade
+layouts/
+  |---blog.jade
+  |---bootswatch.jade
+  |---carousel.jade
+  |---cover.jade
+  |---dashboard.jade
+  |---jumbotron.jade
+  |---jumbotron-narrow.jade
+  |---justified-nav.jade
+  |---navbar.jade
+  |---navbar-fixed.jade
+  |---navbar-static.jade
+  |---non-responsive.jade
+  |---offcanvas.jade
+  |---sign-in.jade
+  |---starter.jade
+  |---sticky-footer.jade
+  |---sticky-footer-navbar.jade
+  |---theme-template.jade</code></pre>
           </div>
           <h2>Examples</h2>
           <h6>Build on the basic template above with Bootstrap's many components. We encourage you to customize and adapt Bootstrap to suit your individual project's needs.</h6>
@@ -112,6 +135,11 @@ components/
             <div class="thumbnail"><a href="examples/theme-template.html"><img src="images/examples/theme.jpg"></a></div>
             <h4>Bootstrap Theme</h4> Load the optional Bootstrap theme for a visually enhanced experience.
           </div>
+          <div class="col-md-4">
+            <div class="thumbnail"><a href="examples/bootswatch.html"><img src="images/examples/bootswatch.jpg"></a></div>
+            <h4>Bootswatch Theme Examples</h4> Load the <a href="https://bootswatch.com/">Bootswatch</a> themes for a completely customzied bootstrap experience.
+          </div>
+          <div class="clearfix"></div>
           <div class="col-md-4">
             <div class="thumbnail"><a href="examples/jumbotron.html"><img src="images/examples/jumbotron.jpg"></a></div>
             <h4>Jumbotron</h4> Build around the jumbotron with a navbar and some basic grid columns.
@@ -201,7 +229,7 @@ components/
         </ul>
         <p> Designed and built with all the love in the world by <a href="https://twitter.com/rajasegar_c">@rajasegar_c</a>.</p>
         <p> Maintained by <a href="https://github.com/rajasegar">Rajasegar Chandiran</a></p>
-        <p> Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a></p>
+        <p> Code licensed under <a href="https://github.com/rajasegar/JADE-Bootstrap/blob/master/LICENSE">MIT</a></p>
         <ul class="jb-social-buttons">
           <li>Currently v0.0.1</li>
           <li><a href="https://github.com/rajasegar/JADE-Bootstrap">GitHub</a></li>

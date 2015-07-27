@@ -21,7 +21,7 @@
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">JADE-Bootstrap</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="getting-started.html">Getting Started</a></li>
@@ -51,297 +51,624 @@
             <p> Includes over 250 glyphs in font format from the Glyphicon Halflings set. <a href="http://glyphicons.com/">Glyphicons</a> Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever possible.</p>
             <div class="bs-glyphicons">
               <ul class="bs-glyphicons-list">
-                <li><span aria-hidden="true" class="glyphicon glyphicon-asterisk"></span><span class="glyphicon-class">+icon("asterisk")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-asterisk"></span><span class="glyphicon-class">asterisk</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-plus"></span><span class="glyphicon-class">+icon("plus")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-plus"></span><span class="glyphicon-class">plus</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-euro"></span><span class="glyphicon-class">+icon("euro")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-euro"></span><span class="glyphicon-class">euro</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-minus"></span><span class="glyphicon-class">+icon("minus")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-minus"></span><span class="glyphicon-class">minus</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-cloud"></span><span class="glyphicon-class">+icon("cloud")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cloud"></span><span class="glyphicon-class">cloud</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-envelope"></span><span class="glyphicon-class">+icon("envelope")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-envelope"></span><span class="glyphicon-class">envelope</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span><span class="glyphicon-class">+icon("pencil")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span><span class="glyphicon-class">pencil</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-glass"></span><span class="glyphicon-class">+icon("glass")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-glass"></span><span class="glyphicon-class">glass</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-music"></span><span class="glyphicon-class">+icon("music")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-music"></span><span class="glyphicon-class">music</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-search"></span><span class="glyphicon-class">+icon("search")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-search"></span><span class="glyphicon-class">search</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-heart"></span><span class="glyphicon-class">+icon("heart")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-heart"></span><span class="glyphicon-class">heart</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span class="glyphicon-class">+icon("star")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span class="glyphicon-class">star</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span class="glyphicon-class">+icon("star-empty")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span class="glyphicon-class">star-empty</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-user"></span><span class="glyphicon-class">+icon("user")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-user"></span><span class="glyphicon-class">user</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-film"></span><span class="glyphicon-class">+icon("film")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-film"></span><span class="glyphicon-class">film</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-th-large"></span><span class="glyphicon-class">+icon("th-large")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-th-large"></span><span class="glyphicon-class">th-large</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-th"></span><span class="glyphicon-class">+icon("th")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-th"></span><span class="glyphicon-class">th</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span><span class="glyphicon-class">+icon("th-list")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span><span class="glyphicon-class">th-list</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-ok"></span><span class="glyphicon-class">+icon("ok")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ok"></span><span class="glyphicon-class">ok</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-remove"></span><span class="glyphicon-class">+icon("remove")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-remove"></span><span class="glyphicon-class">remove</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-zoom-in"></span><span class="glyphicon-class">+icon("zoom-in")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-zoom-in"></span><span class="glyphicon-class">zoom-in</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-zoom-out"></span><span class="glyphicon-class">+icon("zoom-out")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-zoom-out"></span><span class="glyphicon-class">zoom-out</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-off"></span><span class="glyphicon-class">+icon("off")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-off"></span><span class="glyphicon-class">off</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-signal"></span><span class="glyphicon-class">+icon("signal")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-signal"></span><span class="glyphicon-class">signal</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-cog"></span><span class="glyphicon-class">+icon("cog")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cog"></span><span class="glyphicon-class">cog</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-trash"></span><span class="glyphicon-class">+icon("trash")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-trash"></span><span class="glyphicon-class">trash</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="glyphicon-class">+icon("home")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="glyphicon-class">home</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-file"></span><span class="glyphicon-class">+icon("file")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-file"></span><span class="glyphicon-class">file</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-time"></span><span class="glyphicon-class">+icon("time")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-time"></span><span class="glyphicon-class">time</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-road"></span><span class="glyphicon-class">+icon("road")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-road"></span><span class="glyphicon-class">road</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span><span class="glyphicon-class">+icon("download-alt")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-download-alt"></span><span class="glyphicon-class">download-alt</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-download"></span><span class="glyphicon-class">+icon("download")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-download"></span><span class="glyphicon-class">download</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-upload"></span><span class="glyphicon-class">+icon("upload")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-upload"></span><span class="glyphicon-class">upload</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-inbox"></span><span class="glyphicon-class">+icon("inbox")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-inbox"></span><span class="glyphicon-class">inbox</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-play-circle"></span><span class="glyphicon-class">+icon("play-circle")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-play-circle"></span><span class="glyphicon-class">play-circle</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-repeat"></span><span class="glyphicon-class">+icon("repeat")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-repeat"></span><span class="glyphicon-class">repeat</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-refresh"></span><span class="glyphicon-class">+icon("refresh")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-refresh"></span><span class="glyphicon-class">refresh</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span><span class="glyphicon-class">+icon("list-alt")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span><span class="glyphicon-class">list-alt</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-lock"></span><span class="glyphicon-class">+icon("lock")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-lock"></span><span class="glyphicon-class">lock</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-flag"></span><span class="glyphicon-class">+icon("flag")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-flag"></span><span class="glyphicon-class">flag</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-headphones"></span><span class="glyphicon-class">+icon("headphones")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-headphones"></span><span class="glyphicon-class">headphones</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-off"></span><span class="glyphicon-class">+icon("volume-off")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-off"></span><span class="glyphicon-class">volume-off</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-down"></span><span class="glyphicon-class">+icon("volume-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-down"></span><span class="glyphicon-class">volume-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-up"></span><span class="glyphicon-class">+icon("volume-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-volume-up"></span><span class="glyphicon-class">volume-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-qrcode"></span><span class="glyphicon-class">+icon("qrcode")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-qrcode"></span><span class="glyphicon-class">qrcode</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-barcode"></span><span class="glyphicon-class">+icon("barcode")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-barcode"></span><span class="glyphicon-class">barcode</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-tag"></span><span class="glyphicon-class">+icon("tag")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tag"></span><span class="glyphicon-class">tag</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-tags"></span><span class="glyphicon-class">+icon("tags")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tags"></span><span class="glyphicon-class">tags</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-book"></span><span class="glyphicon-class">+icon("book")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-book"></span><span class="glyphicon-class">book</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-bookmark"></span><span class="glyphicon-class">+icon("bookmark")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bookmark"></span><span class="glyphicon-class">bookmark</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-print"></span><span class="glyphicon-class">+icon("print")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-print"></span><span class="glyphicon-class">print</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-camera"></span><span class="glyphicon-class">+icon("camera")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-camera"></span><span class="glyphicon-class">camera</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-font"></span><span class="glyphicon-class">+icon("font")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-font"></span><span class="glyphicon-class">font</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-bold"></span><span class="glyphicon-class">+icon("bold")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bold"></span><span class="glyphicon-class">bold</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-italic"></span><span class="glyphicon-class">+icon("italic")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-italic"></span><span class="glyphicon-class">italic</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-text-height"></span><span class="glyphicon-class">+icon("text-height")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-text-height"></span><span class="glyphicon-class">text-height</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-text-width"></span><span class="glyphicon-class">+icon("text-width")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-text-width"></span><span class="glyphicon-class">text-width</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-align-left"></span><span class="glyphicon-class">+icon("align-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-align-left"></span><span class="glyphicon-class">align-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-align-center"></span><span class="glyphicon-class">+icon("align-center")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-align-center"></span><span class="glyphicon-class">align-center</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-align-right"></span><span class="glyphicon-class">+icon("align-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-align-right"></span><span class="glyphicon-class">align-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-align-justify"></span><span class="glyphicon-class">+icon("align-justify")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-align-justify"></span><span class="glyphicon-class">align-justify</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-list"></span><span class="glyphicon-class">+icon("list")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-list"></span><span class="glyphicon-class">list</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-indent-left"></span><span class="glyphicon-class">+icon("indent-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-indent-left"></span><span class="glyphicon-class">indent-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-indent-right"></span><span class="glyphicon-class">+icon("indent-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-indent-right"></span><span class="glyphicon-class">indent-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span><span class="glyphicon-class">+icon("facetime-video")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span><span class="glyphicon-class">facetime-video</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-picture"></span><span class="glyphicon-class">+icon("picture")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-picture"></span><span class="glyphicon-class">picture</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-map-marker"></span><span class="glyphicon-class">+icon("map-marker")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-map-marker"></span><span class="glyphicon-class">map-marker</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-adjust"></span><span class="glyphicon-class">+icon("adjust")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-adjust"></span><span class="glyphicon-class">adjust</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-tint"></span><span class="glyphicon-class">+icon("tint")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tint"></span><span class="glyphicon-class">tint</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-edit"></span><span class="glyphicon-class">+icon("edit")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-edit"></span><span class="glyphicon-class">edit</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-share"></span><span class="glyphicon-class">+icon("share")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-share"></span><span class="glyphicon-class">share</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-check"></span><span class="glyphicon-class">+icon("check")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-check"></span><span class="glyphicon-class">check</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-move"></span><span class="glyphicon-class">+icon("move")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-move"></span><span class="glyphicon-class">move</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span><span class="glyphicon-class">+icon("step-backward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span><span class="glyphicon-class">step-backward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span><span class="glyphicon-class">+icon("fast-forward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span><span class="glyphicon-class">fast-forward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-backward"></span><span class="glyphicon-class">+icon("backward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-backward"></span><span class="glyphicon-class">backward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-play"></span><span class="glyphicon-class">+icon("play")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-play"></span><span class="glyphicon-class">play</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-pause"></span><span class="glyphicon-class">+icon("pause")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-pause"></span><span class="glyphicon-class">pause</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-stop"></span><span class="glyphicon-class">+icon("stop")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-stop"></span><span class="glyphicon-class">stop</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-forward"></span><span class="glyphicon-class">+icon("forward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-forward"></span><span class="glyphicon-class">forward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span><span class="glyphicon-class">+icon("fast-backward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span><span class="glyphicon-class">fast-backward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span><span class="glyphicon-class">+icon("step-forward")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span><span class="glyphicon-class">step-forward</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-eject"></span><span class="glyphicon-class">+icon("eject")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-eject"></span><span class="glyphicon-class">eject</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon-class">+icon("chevron-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon-class">chevron-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon-class">+icon("chevron-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon-class">chevron-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span><span class="glyphicon-class">+icon("plus-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span><span class="glyphicon-class">plus-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-minus-sign"></span><span class="glyphicon-class">+icon("minus-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-minus-sign"></span><span class="glyphicon-class">minus-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="glyphicon-class">+icon("remove-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="glyphicon-class">remove-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span><span class="glyphicon-class">+icon("ok-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span><span class="glyphicon-class">ok-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span><span class="glyphicon-class">+icon("question-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span><span class="glyphicon-class">question-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span><span class="glyphicon-class">+icon("info-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span><span class="glyphicon-class">info-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-screenshot"></span><span class="glyphicon-class">+icon("screenshot")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-screenshot"></span><span class="glyphicon-class">screenshot</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span><span class="glyphicon-class">+icon("remove-circle")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span><span class="glyphicon-class">remove-circle</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-ok-circle"></span><span class="glyphicon-class">+icon("ok-circle")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ok-circle"></span><span class="glyphicon-class">ok-circle</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-ban-circle"></span><span class="glyphicon-class">+icon("ban-circle")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ban-circle"></span><span class="glyphicon-class">ban-circle</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span><span class="glyphicon-class">+icon("arrow-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span><span class="glyphicon-class">arrow-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-right"></span><span class="glyphicon-class">+icon("arrow-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-right"></span><span class="glyphicon-class">arrow-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon-class">+icon("arrow-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon-class">arrow-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon-class">+icon("arrow-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon-class">arrow-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-share-alt"></span><span class="glyphicon-class">+icon("share-alt")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-share-alt"></span><span class="glyphicon-class">share-alt</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-full"></span><span class="glyphicon-class">+icon("resize-full")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-full"></span><span class="glyphicon-class">resize-full</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-small"></span><span class="glyphicon-class">+icon("resize-small")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-small"></span><span class="glyphicon-class">resize-small</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span><span class="glyphicon-class">+icon("exclamation-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span><span class="glyphicon-class">exclamation-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-gift"></span><span class="glyphicon-class">+icon("gift")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-gift"></span><span class="glyphicon-class">gift</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-leaf"></span><span class="glyphicon-class">+icon("leaf")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-leaf"></span><span class="glyphicon-class">leaf</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-fire"></span><span class="glyphicon-class">+icon("fire")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-fire"></span><span class="glyphicon-class">fire</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span><span class="glyphicon-class">+icon("eye-open")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span><span class="glyphicon-class">eye-open</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-eye-close"></span><span class="glyphicon-class">+icon("eye-close")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-eye-close"></span><span class="glyphicon-class">eye-close</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span><span class="glyphicon-class">+icon("warning-sign")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span><span class="glyphicon-class">warning-sign</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-plane"></span><span class="glyphicon-class">+icon("plane")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-plane"></span><span class="glyphicon-class">plane</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span><span class="glyphicon-class">+icon("calendar")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span><span class="glyphicon-class">calendar</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-random"></span><span class="glyphicon-class">+icon("random")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-random"></span><span class="glyphicon-class">random</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-comment"></span><span class="glyphicon-class">+icon("comment")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-comment"></span><span class="glyphicon-class">comment</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-magnet"></span><span class="glyphicon-class">+icon("magnet")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-magnet"></span><span class="glyphicon-class">magnet</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon-class">+icon("chevron-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon-class">chevron-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon-class">+icon("chevron-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon-class">chevron-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-retweet"></span><span class="glyphicon-class">+icon("retweet")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-retweet"></span><span class="glyphicon-class">retweet</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span><span class="glyphicon-class">+icon("shopping-cart")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span><span class="glyphicon-class">shopping-cart</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span><span class="glyphicon-class">+icon("folder-close")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-folder-close"></span><span class="glyphicon-class">folder-close</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span><span class="glyphicon-class">+icon("folder-open")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span><span class="glyphicon-class">folder-open</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-vertical"></span><span class="glyphicon-class">+icon("resize-vertical")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-vertical"></span><span class="glyphicon-class">resize-vertical</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-horizontal"></span><span class="glyphicon-class">+icon("resize-horizontal")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-resize-horizontal"></span><span class="glyphicon-class">resize-horizontal</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-hdd"></span><span class="glyphicon-class">+icon("hdd")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hdd"></span><span class="glyphicon-class">hdd</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span><span class="glyphicon-class">+icon("bullhorn")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span><span class="glyphicon-class">bullhorn</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-bell"></span><span class="glyphicon-class">+icon("bell")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bell"></span><span class="glyphicon-class">bell</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-certificate"></span><span class="glyphicon-class">+icon("certificate")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-certificate"></span><span class="glyphicon-class">certificate</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span><span class="glyphicon-class">+icon("thumbs-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span><span class="glyphicon-class">thumbs-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span><span class="glyphicon-class">+icon("thumbs-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-thumbs-down"></span><span class="glyphicon-class">thumbs-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-right"></span><span class="glyphicon-class">+icon("hand-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-right"></span><span class="glyphicon-class">hand-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-left"></span><span class="glyphicon-class">+icon("hand-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-left"></span><span class="glyphicon-class">hand-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-up"></span><span class="glyphicon-class">+icon("hand-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-up"></span><span class="glyphicon-class">hand-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-down"></span><span class="glyphicon-class">+icon("hand-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hand-down"></span><span class="glyphicon-class">hand-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-right"></span><span class="glyphicon-class">+icon("circle-arrow-right")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-right"></span><span class="glyphicon-class">circle-arrow-right</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-left"></span><span class="glyphicon-class">+icon("circle-arrow-left")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-left"></span><span class="glyphicon-class">circle-arrow-left</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"></span><span class="glyphicon-class">+icon("circle-arrow-up")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"></span><span class="glyphicon-class">circle-arrow-up</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-down"></span><span class="glyphicon-class">+icon("circle-arrow-down")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-down"></span><span class="glyphicon-class">circle-arrow-down</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-globe"></span><span class="glyphicon-class">+icon("globe")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-globe"></span><span class="glyphicon-class">globe</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-wrench"></span><span class="glyphicon-class">+icon("wrench")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-wrench"></span><span class="glyphicon-class">wrench</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-tasks"></span><span class="glyphicon-class">+icon("tasks")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tasks"></span><span class="glyphicon-class">tasks</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-filter"></span><span class="glyphicon-class">+icon("filter")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-filter"></span><span class="glyphicon-class">filter</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-briefcase"></span><span class="glyphicon-class">+icon("briefcase")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-briefcase"></span><span class="glyphicon-class">briefcase</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-fullscreen"></span><span class="glyphicon-class">+icon("fullscreen")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-fullscreen"></span><span class="glyphicon-class">fullscreen</span>
                 </li>
-                <li><span aria-hidden="true" class="glyphicon glyphicon-dashboard"></span><span class="glyphicon-class">+icon("dashboard")</span>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-dashboard"></span><span class="glyphicon-class">dashboard</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-paperclip"></span><span class="glyphicon-class">paperclip</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-heart-empty"></span><span class="glyphicon-class">heart-empty</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-link"></span><span class="glyphicon-class">link</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-phone"></span><span class="glyphicon-class">phone</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-pushpin"></span><span class="glyphicon-class">pushpin</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-usd"></span><span class="glyphicon-class">usd</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-gbp"></span><span class="glyphicon-class">gbp</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort"></span><span class="glyphicon-class">sort</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-alphabet"></span><span class="glyphicon-class">sort-by-alphabet</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-alphabet-alt"></span><span class="glyphicon-class">sort-by-alphabet-alt</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-order"></span><span class="glyphicon-class">sort-by-order</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-order-alt"></span><span class="glyphicon-class">sort-by-order-alt</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes"></span><span class="glyphicon-class">sort-by-attributes</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sort-by-attributes-alt"></span><span class="glyphicon-class">sort-by-attributes-alt</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-unchecked"></span><span class="glyphicon-class">unchecked</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-expand"></span><span class="glyphicon-class">expand</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-collapse-down"></span><span class="glyphicon-class">collapse-down</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-collapse-up"></span><span class="glyphicon-class">collapse-up</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span><span class="glyphicon-class">log-in</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-flash"></span><span class="glyphicon-class">flash</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-log-out"></span><span class="glyphicon-class">log-out</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-new-window"></span><span class="glyphicon-class">new-window</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-record"></span><span class="glyphicon-class">record</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-save"></span><span class="glyphicon-class">save</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-open"></span><span class="glyphicon-class">open</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-saved"></span><span class="glyphicon-class">saved</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-import"></span><span class="glyphicon-class">import</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-export"></span><span class="glyphicon-class">export</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-send"></span><span class="glyphicon-class">send</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-floppy-disk"></span><span class="glyphicon-class">floppy-disk</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-floppy-saved"></span><span class="glyphicon-class">floppy-saved</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-floppy-remove"></span><span class="glyphicon-class">floppy-remove</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-floppy-save"></span><span class="glyphicon-class">floppy-save</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-floppy-open"></span><span class="glyphicon-class">floppy-open</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-credit-card"></span><span class="glyphicon-class">credit-card</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-transfer"></span><span class="glyphicon-class">transfer</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cutlery"></span><span class="glyphicon-class">cutlery</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-header"></span><span class="glyphicon-class">header</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-compressed"></span><span class="glyphicon-class">compressed</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span><span class="glyphicon-class">earphone</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-phone-alt"></span><span class="glyphicon-class">phone-alt</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tower"></span><span class="glyphicon-class">tower</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-stats"></span><span class="glyphicon-class">stats</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sd-video"></span><span class="glyphicon-class">sd-video</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hd-video"></span><span class="glyphicon-class">hd-video</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-subtitles"></span><span class="glyphicon-class">subtitles</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sound-stereo"></span><span class="glyphicon-class">sound-stereo</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sound-dolby"></span><span class="glyphicon-class">sound-dolby</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sound-5-1"></span><span class="glyphicon-class">sound-5-1</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sound-6-1"></span><span class="glyphicon-class">sound-6-1</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sound-7-1"></span><span class="glyphicon-class">sound-7-1</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-copyright-mark"></span><span class="glyphicon-class">copyright-mark</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-registration-mark"></span><span class="glyphicon-class">registration-mark</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cloud-download"></span><span class="glyphicon-class">cloud-download</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cloud-upload"></span><span class="glyphicon-class">cloud-upload</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tree-conifer"></span><span class="glyphicon-class">tree-conifer</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tree-deciduous"></span><span class="glyphicon-class">tree-deciduous</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-cd"></span><span class="glyphicon-class">cd</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-save-file"></span><span class="glyphicon-class">save-file</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-open-file"></span><span class="glyphicon-class">open-file</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-level-up"></span><span class="glyphicon-class">level-up</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-copy"></span><span class="glyphicon-class">copy</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-paste"></span><span class="glyphicon-class">paste</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-alert"></span><span class="glyphicon-class">alert</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-equalizer"></span><span class="glyphicon-class">equalizer</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-king"></span><span class="glyphicon-class">king</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-queen"></span><span class="glyphicon-class">queen</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-pawn"></span><span class="glyphicon-class">pawn</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bishop"></span><span class="glyphicon-class">bishop</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-knight"></span><span class="glyphicon-class">knight</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-baby-formula"></span><span class="glyphicon-class">baby-formula</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-tent"></span><span class="glyphicon-class">tent</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-blackboard"></span><span class="glyphicon-class">blackboard</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bed"></span><span class="glyphicon-class">bed</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-apple"></span><span class="glyphicon-class">apple</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-erase"></span><span class="glyphicon-class">erase</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-hourglass"></span><span class="glyphicon-class">hourglass</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-lamp"></span><span class="glyphicon-class">lamp</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-duplicate"></span><span class="glyphicon-class">duplicate</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-piggy-bank"></span><span class="glyphicon-class">piggy-bank</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-scissors"></span><span class="glyphicon-class">scissors</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-bitcoin"></span><span class="glyphicon-class">bitcoin</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-btc"></span><span class="glyphicon-class">btc</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-xbt"></span><span class="glyphicon-class">xbt</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-yen"></span><span class="glyphicon-class">yen</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-jpy"></span><span class="glyphicon-class">jpy</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ruble"></span><span class="glyphicon-class">ruble</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-rub"></span><span class="glyphicon-class">rub</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-scale"></span><span class="glyphicon-class">scale</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ice-lolly"></span><span class="glyphicon-class">ice-lolly</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-ice-lolly-tasted"></span><span class="glyphicon-class">ice-lolly-tasted</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-education"></span><span class="glyphicon-class">education</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-option-horizontal"></span><span class="glyphicon-class">option-horizontal</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-option-vertical"></span><span class="glyphicon-class">option-vertical</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span><span class="glyphicon-class">menu-hamburger</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-modal-window"></span><span class="glyphicon-class">modal-window</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-oil"></span><span class="glyphicon-class">oil</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-grain"></span><span class="glyphicon-class">grain</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-sunglasses"></span><span class="glyphicon-class">sunglasses</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-text-size"></span><span class="glyphicon-class">text-size</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-text-color"></span><span class="glyphicon-class">text-color</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-text-background"></span><span class="glyphicon-class">text-background</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-top"></span><span class="glyphicon-class">object-align-top</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-bottom"></span><span class="glyphicon-class">object-align-bottom</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-horizontal"></span><span class="glyphicon-class">object-align-horizontal</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-left"></span><span class="glyphicon-class">object-align-left</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-vertical"></span><span class="glyphicon-class">object-align-vertical</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-object-align-right"></span><span class="glyphicon-class">object-align-right</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-triangle-right"></span><span class="glyphicon-class">triangle-right</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-triangle-left"></span><span class="glyphicon-class">triangle-left</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-triangle-bottom"></span><span class="glyphicon-class">triangle-bottom</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-triangle-top"></span><span class="glyphicon-class">triangle-top</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-console"></span><span class="glyphicon-class">console</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-superscript"></span><span class="glyphicon-class">superscript</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-subscript"></span><span class="glyphicon-class">subscript</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span><span class="glyphicon-class">menu-left</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span><span class="glyphicon-class">menu-right</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span><span class="glyphicon-class">menu-down</span>
+                </li>
+                <li><span aria-hidden="true" class="glyphicon glyphicon-menu-up"></span><span class="glyphicon-class">menu-up</span>
                 </li>
               </ul>
             </div><br><span aria-hidden="true" class="glyphicon glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-primary glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-info glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-warning glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-danger glyphicon-search"></span><span aria-hidden="true" class="glyphicon text-success glyphicon-search"></span>
             <p></p>
             <div class="highlight">
               <pre><code data-lang="jade" class="language-jade">+icon("search")<br>+icon-primary("search")<br>+icon-info("search")<br>+icon-warning("search")<br>+icon-danger("search")<br>+icon-success("search")</code></pre>
+            </div>
+          </section>
+          <section id="buttons">
+            <h2>Buttons</h2>
+            <h3>Link Buttons</h3><a href="#" role="button" class="btn btn-default">Default Link Button</a> &nbsp;<a href="#" role="button" class="btn btn-primary">Primary Link Button</a> &nbsp;<a href="#" role="button" class="btn btn-info">Info Link Button</a><br><br><a href="#" role="button" class="btn btn-warning">Warning Link Button</a> &nbsp;<a href="#" role="button" class="btn btn-danger">Danger Link Button</a> &nbsp;<a href="#" role="button" class="btn btn-success">Success Link Button</a>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+a-btn("#") Default Link Button<br>+a-btn-primary("#") Primary Link Button<br>+a-btn-info("#") Info Link Button<br>+a-btn-warning("#") Warning Link Button<br>+a-btn-danger("#") Danger Link Button<br>+a-btn-success("#") Success Link Button</code></pre>
+            </div>
+            <h4>Buttons</h4>
+            <button type="button" class="btn btn-default">Default Button</button>
+            <button type="button" class="btn btn-primary">Primary Button</button>
+            <button type="button" class="btn btn-info">Info Button</button>
+            <button type="button" class="btn btn-warning">Warning Button</button>
+            <button type="button" class="btn btn-danger">Danger Button</button>
+            <button type="button" class="btn btn-success">Success Button</button>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+btn("Default Button")<br>+btn-primary("Primary Button")<br>+btn-info("Info Button")<br>+btn-warning(" Warning Button")<br>+btn-danger("Danger Button")<br>+btn-success("Success Button")<br></code></pre>
+            </div>
+            <h4>Large Buttons</h4>
+            <button type="button" class="btn btn-default btn-lg">Default Large Button</button>
+            <button type="button" class="btn btn-primary btn-lg">Primary Large Button</button>
+            <button type="button" class="btn btn-info btn-lg">Info Large Button</button><br><br>
+            <button type="button" class="btn btn-warning btn-lg">Warning Large Button</button>
+            <button type="button" class="btn btn-danger btn-lg">Danger Large Button</button>
+            <button type="button" class="btn btn-success btn-lg">Success Large Button</button>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+btn-lg("Default Large Button")<br>+btn-lg-primary("Primary Large Button")<br>+btn-lg-info("Info Large Button")<br>+btn-lg-warning("Warning Large Button")<br>+btn-lg-danger("Danger Large Button")<br>+btn-lg-success("Success Large Button")<br></code></pre>
+            </div>
+            <h4>Small Buttons</h4>
+            <button type="button" class="btn btn-default btn-sm">Default Small Button</button>
+            <button type="button" class="btn btn-primary btn-sm">Primary Small Button</button>
+            <button type="button" class="btn btn-info btn-sm">Info Small Button</button><br><br>
+            <button type="button" class="btn btn-warning btn-sm">Warning Small Button</button>
+            <button type="button" class="btn btn-danger btn-sm">Danger Small Button</button>
+            <button type="button" class="btn btn-success btn-sm">Success Small Button</button>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+btn-sm("Default Small Button")<br>+btn-sm-info("Info Small Button")<br>+btn-sm-info("Info Small Button")<br>+btn-sm-warning("Warning Small Button")<br>+btn-sm-danger("Danger Small Button")<br>+btn-sm-success("Success Small Button")<br></code></pre>
+            </div>
+            <h4>Extra Small Buttons</h4>
+            <button type="button" class="btn btn-default btn-xs">Default Extra Small Button</button>
+            <button type="button" class="btn btn-primary btn-xs">Primary Extra Small Button</button>
+            <button type="button" class="btn btn-info btn-xs">Info Extra Small Button</button><br><br>
+            <button type="button" class="btn btn-warning btn-xs">Warning Extra Small Button</button>
+            <button type="button" class="btn btn-danger btn-xs">Danger Extra Small Button</button>
+            <button type="button" class="btn btn-success btn-xs">Success Extra Small Button</button>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+btn-xs("Default Extra Small Button")<br>+btn-xs-primary("Primary Extra Small Button")<br>+btn-xs-info("Info Extra Small Button")<br>+btn-xs-warning("Warning Extra Small Button")<br>+btn-xs-danger("Danger Extra Small Button")<br>+btn-xs-success("Success Extra Small Button")<br></code></pre>
+            </div>
+            <h4>Input Buttons</h4>
+            <input type="button" value="Default Input Button" class="btn btn-default"/>
+            <input type="button" value="Primary Input Button" class="btn btn-primary"/>
+            <input type="button" value="Info Input Button" class="btn btn-info"/><br><br>
+            <input type="button" value="Warning Input Button" class="btn btn-warning"/>
+            <input type="button" value="Danger Input Button" class="btn btn-danger"/>
+            <input type="button" value="Success Input Button" class="btn btn-success"/>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+input-btn("Default Input Button")<br>+input-btn-primary("Primary Input Button")<br>+input-btn-info("Info Input Button")<br>+input-btn-warning("Warning Input Button")<br>+input-btn-danger("Danger Input Button")<br>+input-btn-success("Success Input Button")<br></code></pre>
+            </div>
+            <h4>Submit Buttons</h4>
+            <input type="submit" value="Default Submit Button" class="btn btn-default"/>
+            <input type="submit" value="Primary Submit Button" class="btn btn-primary"/>
+            <input type="submit" value="Info Submit Button" class="btn btn-info"/><br><br>
+            <input type="submit" value="Warning Submit Button" class="btn btn-warning"/>
+            <input type="submit" value="Danger Submit Button" class="btn btn-danger"/>
+            <input type="submit" value="Success Submit Button" class="btn btn-success"/>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+submit("Default Submit Button")<br>+submit-primary("Primary Submit Button")<br>+submit-info("Info Submit Button")<br>+submit-warning("Warning Submit Button")<br>+submit-danger("Danger Submit Button")<br>+submit-success("Success Submit Button")</code></pre>
+            </div>
+          </section>
+          <section id="images">
+            <h3>Images</h3><img src="images/slide1.jpg" alt="Responsive Image" class="img-responsive"/>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+img-responsive("images/slide1.jpg","Responsive Image")</code></pre>
+            </div><img src="images/slide1.jpg" alt="Responsive Image" class="img-responsive center-block"/>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+img-responsive-center("images/slide1.jpg","Responsive Image")</code></pre>
+            </div><img src="images/img_rounded.jpg" alt="Image with round corners" class="img-rounded"/>&nbsp;&nbsp;&nbsp;<img src="images/img_circle.jpg" alt="Circle image" class="img-circle"/>&nbsp;&nbsp;&nbsp;<img src="images/img_thumbnail.jpg" alt="Image with thumbnail borders" class="img-thumbnail"/>
+            <p></p>
+            <div class="highlight">
+              <pre><code data-lang="jade" class="language-jade">+img-rounded("images/img_rounded.jpg","Image with round corners")<br>+img-circle("images/img_circle.jpg","Circle image")<br>+img-thumbnail("images/img_thumbnail.jpg","Image with thumbnail borders")<br></code></pre>
             </div>
           </section>
           <section id="alerts">
@@ -471,9 +798,7 @@
                   <input type="radio"/>My Radio Button
                 </label>
               </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-default">Register</button>
-              </div>
+              <input type="submit" value="Register" class="btn btn-default"/>
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon">$
@@ -877,7 +1202,7 @@
           <section id="carousels">
             <h3>Carousel</h3>
             <hr> A slideshow component for cycling through elements, like a carousel. <strong>Nested carousels are not supported.</strong>
-            <h4>Examples</h4>
+            <h4>Example - Image with Caption</h4>
             <div id="carousel-sample" data-ride="carousel" class="carousel slide">
               <ol class="carousel-indicators">
                 <li data-target="#carousel-sample" data-slide-to="0" class="active"></li>
@@ -909,11 +1234,93 @@
               </div><a href="#carousel-sample" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#carousel-sample" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div><br>
             <div class="highlight">
-              <pre><code>+carousel("sample",[
-	{image:"images/slide1.jpg",caption:"Carousel Caption #1"},
-	{image:"images/slide2.jpg",caption:"Carousel Caption #2"},
-	{image:"images/slide3.jpg",caption:"Carousel Caption #3"},
-	{image:"images/slide4.jpg",caption:"Carousel Caption #4"}
+              <pre><code>+carousel("Carousel ID",[
+	{image:"images/slide1.jpg",p:"Carousel Caption #1"},
+	{image:"images/slide2.jpg",p:"Carousel Caption #2"},
+	{image:"images/slide3.jpg",p:"Carousel Caption #3"},
+	{image:"images/slide4.jpg",p:"Carousel Caption #4"}
+])</code></pre>
+            </div>
+            <h4>Example - Image only Carousel</h4>
+            <div id="carousel-image_only_carousel" data-ride="carousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-image_only_carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-image_only_carousel" data-slide-to="1"></li>
+                <li data-target="#carousel-image_only_carousel" data-slide-to="2"></li>
+                <li data-target="#carousel-image_only_carousel" data-slide-to="3"></li>
+              </ol>
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="images/slide5.jpg"/>
+                  <div class="carousel-caption">
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide6.jpg"/>
+                  <div class="carousel-caption">
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide7.jpg"/>
+                  <div class="carousel-caption">
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide8.jpg"/>
+                  <div class="carousel-caption">
+                  </div>
+                </div>
+              </div><a href="#carousel-image_only_carousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#carousel-image_only_carousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+            </div><br>
+            <div class="highlight">
+              <pre><code>+carousel("Carousel ID_2",[
+	{image:"images/slide1.jpg"},
+	{image:"images/slide2.jpg"},
+	{image:"images/slide3.jpg"},
+	{image:"images/slide4.jpg"}
+])</code></pre>
+            </div>
+            <h4>Example - Carousel with Action buttons</h4>
+            <div id="carousel-cta_carousel" data-ride="carousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-cta_carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-cta_carousel" data-slide-to="1"></li>
+                <li data-target="#carousel-cta_carousel" data-slide-to="2"></li>
+                <li data-target="#carousel-cta_carousel" data-slide-to="3"></li>
+              </ol>
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="images/slide9.jpg"/>
+                  <div class="carousel-caption">
+                    <h1>Example headline</h1>
+                    <p>Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a href="#" role="button" class="btn btn-lg btn-primary">Sign up today</a></p>
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide10.jpg"/>
+                  <div class="carousel-caption">
+                    <h1>Example headline</h1>
+                    <p>Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a href="#" role="button" class="btn btn-lg btn-primary">Sign up today</a></p>
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide11.jpg"/>
+                  <div class="carousel-caption">
+                    <h1>Example headline</h1>
+                    <p>Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a href="#" role="button" class="btn btn-lg btn-primary">Sign up today</a></p>
+                  </div>
+                </div>
+                <div class="item"><img src="images/slide12.jpg"/>
+                  <div class="carousel-caption">
+                    <h1>Example headline</h1>
+                    <p>Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a href="#" role="button" class="btn btn-lg btn-primary">Sign up today</a></p>
+                  </div>
+                </div>
+              </div><a href="#carousel-cta_carousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#carousel-cta_carousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+            </div><br>
+            <div class="highlight">
+              <pre><code>+carousel("Carousel ID_3",[
+	{image:"images/slide1.jpg",h1:"Headline #1",p:"Carousel Caption #1",button:{caption:"Sign up today",url:"#"}},
+	{image:"images/slide1.jpg",h1:"Headline #2",p:"Carousel Caption #2",button:{caption:"Sign up today",url:"#"}},
+	{image:"images/slide1.jpg",h1:"Headline #3",p:"Carousel Caption #3",button:{caption:"Sign up today",url:"#"}},
+	{image:"images/slide1.jpg",h1:"Headline #4",p:"Carousel Caption #4",button:{caption:"Sign up today",url:"#"}}
 ])</code></pre>
             </div>
           </section>
@@ -1520,6 +1927,8 @@
         <div class="col-md-3 scrollspy">
           <ul id="sidebar_nav" data-spy="affix" class="nav nav-pills nav-stacked hidden-xs hidden-sm">
             <li><a href="#glyphicons">Glyphicons</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#images">Images</a></li>
             <li><a href="#alerts">Alerts</a></li>
             <li><a href="#dropdowns">Dropdowns</a></li>
             <li><a href="#forms"> Forms</a></li>
@@ -1561,7 +1970,7 @@
         </ul>
         <p> Designed and built with all the love in the world by <a href="https://twitter.com/rajasegar_c">@rajasegar_c</a>.</p>
         <p> Maintained by <a href="https://github.com/rajasegar">Rajasegar Chandiran</a></p>
-        <p> Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a></p>
+        <p> Code licensed under <a href="https://github.com/rajasegar/JADE-Bootstrap/blob/master/LICENSE">MIT</a></p>
         <ul class="jb-social-buttons">
           <li>Currently v0.0.1</li>
           <li><a href="https://github.com/rajasegar/JADE-Bootstrap">GitHub</a></li>

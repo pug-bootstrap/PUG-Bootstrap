@@ -44,7 +44,7 @@ mixin navbar-fixed(name,id,style)
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand(href='#') Project name
+				a.navbar-brand(href='#')= name
 			.collapse.navbar-collapse( id=id )
 				ul.nav.navbar-nav
 					block
@@ -59,7 +59,7 @@ mixin navbar-static(name,id,style)
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand(href='#') Project name
+				a.navbar-brand(href='#')= name
 			.collapse.navbar-collapse( id=id )
 				ul.nav.navbar-nav
 					block

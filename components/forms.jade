@@ -1,10 +1,10 @@
 //- Input control with form-group wrapper
-mixin input(type,id,placeholder,label)
+mixin input(type,id,placeholder,label,name)
 	.form-group
 		label(for="#{id}") #{label}
-		input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+		input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}",name="#{name}")
 
-//- Simple form input control without a form-group		
+//- Simple form input control without a form-group
 mixin input-simple(type,id,placeholder,label)
 	input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
 
@@ -15,7 +15,7 @@ mixin checkbox(text)
 			input(type="checkbox")
 			= text
 
-//- Checkbox - Inline style			
+//- Checkbox - Inline style
 mixin checkbox-inline(text)
 	.checkbox-inline
 		input(type="checkbox")
@@ -55,9 +55,9 @@ mixin input-group(prepend,append)
 mixin icon-btn(icon)
 	button.btn.btn-default(type="button",aria-label="#{icon}")
 		+icon(icon)
-		
 
-	
+
+
 //- Badges
 mixin badge(text)
 	span.badge= text

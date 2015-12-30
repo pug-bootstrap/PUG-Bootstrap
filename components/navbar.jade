@@ -1,8 +1,9 @@
 //- Navbar mixins by Kezz Bracey
 //- https://github.com/tutsplus/baking-bootstrap-snippets-with-jade
 //- Author:  http://tutsplus.com/authors/kezz-bracey
-mixin navbar(name, id, style)
+mixin navbar(name, id, style, href)
 	- var style = (typeof style === 'undefined') ? "default" : style
+  - var href = (typeof style === 'undefined') ? "#" : href
 	nav( role="navigation", class=["navbar", "navbar-" + style] )
 		.navbar-header
 			button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
@@ -10,7 +11,7 @@ mixin navbar(name, id, style)
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
-			a.navbar-brand(href="#")= name
+			a.navbar-brand(href=href)= name
 
 		.collapse.navbar-collapse( id=id )
 			ul.nav.navbar-nav

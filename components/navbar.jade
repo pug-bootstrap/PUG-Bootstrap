@@ -3,7 +3,7 @@
 //- Author:  http://tutsplus.com/authors/kezz-bracey
 mixin navbar(name, id, style, href)
 	- var style = (typeof style === 'undefined') ? "default" : style
-  - var href = (typeof style === 'undefined') ? "#" : href
+	- var href = (typeof style === 'undefined') ? "#" : href
 	nav( role="navigation", class=["navbar", "navbar-" + style] )
 		.navbar-header
 			button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")

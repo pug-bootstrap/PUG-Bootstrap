@@ -1,5 +1,5 @@
 # JADE-Bootstrap
-[Bootstrap](http://getbootstrap.com) framework written completely using mixins in [JADE](http://jade-lang.com)
+[Bootstrap](http://getbootstrap.com) framework written completely using mixins in [PUG](http://jade-lang.com)(formerly JADE)
 
 ##Website
 [JADE-Bootstrap](http://rajasegar.github.io/JADE-Bootstrap/) 
@@ -24,43 +24,43 @@ The quickest way to get started for NodeJS applications is with this [boilerplat
 Within the download you'll find the following directories and files, logically grouping common mixins. You'll see something like this:
 
 ```
-bootstrap.jade
+bootstrap.pug
 ├── components/
-│   ├── accordion.jade
-│   ├── alerts.jade
-│   ├── carousel.jade
-│   ├── dropdowns.jade
-│   ├── forms.jade
-│   ├── icons.jade
-│   ├── labels.jade
-│   ├── list-groups.jade
-│   ├── modal.jade
-│   ├── navbar.jade
-│   ├── navs.jade
-│   ├── panels.jade
-│   ├── progress-bars.jade
-│   ├── tables.jade
-│   ├── tabs.jade
-│   ├── toggle.jade
-│   └── tooltips.jade
+│   ├── accordion.pug
+│   ├── alerts.pug
+│   ├── carousel.pug
+│   ├── dropdowns.pug
+│   ├── forms.pug
+│   ├── icons.pug
+│   ├── labels.pug
+│   ├── list-groups.pug
+│   ├── modal.pug
+│   ├── navbar.pug
+│   ├── navs.pug
+│   ├── panels.pug
+│   ├── progress-bars.pug
+│   ├── tables.pug
+│   ├── tabs.pug
+│   ├── toggle.pug
+│   └── tooltips.pug
 └── layouts/
-    ├── blog.jade
-    ├── carousel.jade
-    ├── cover.jade
-    ├── dashboard.jade
-    ├── jumbotron.jade
-    ├── jumbotron-narrow.jade
-    ├── justified-nav.jade
-    ├── navbar.jade
-    ├── navbar_fixed.jade
-    ├── navbar_static.jade
-    ├── non-responsive.jade
-    ├── offcanvas.jade
-    ├── sign-in.jade
-    ├── starter.jade
-    ├── sticky-footer.jade
-    ├── sticky-footer-navbar.jade
-    └── theme-template.jade
+    ├── blog.pug
+    ├── carousel.pug
+    ├── cover.pug
+    ├── dashboard.pug
+    ├── jumbotron.pug
+    ├── jumbotron-narrow.pug
+    ├── justified-nav.pug
+    ├── navbar.pug
+    ├── navbar_fixed.pug
+    ├── navbar_static.pug
+    ├── non-responsive.pug
+    ├── offcanvas.pug
+    ├── sign-in.pug
+    ├── starter.pug
+    ├── sticky-footer.pug
+    ├── sticky-footer-navbar.pug
+    └── theme-template.pug
 
 ```
   
@@ -68,7 +68,7 @@ bootstrap.jade
 ## Features
 
   * Bootstrap set as the default UI framework
-  * JADE set as the default Template engine
+  * PUG set as the default Template engine
   * Focus on high performance
-  * Super-speed development using JADE mixins
+  * Super-speed development using PUG mixins
   * Some widely used sample layouts to start with.

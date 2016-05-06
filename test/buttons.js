@@ -1,11 +1,10 @@
 var assert = require('assert');
-var jade = require('jade');
+var pug = require('pug');
 var fs = require('fs');
 var path = require('path');
 
-var fn = jade.compileFileClient(__dirname + "/buttons.jade");
+var fn = pug.compileFileClient(__dirname + "/buttons.pug");
 fs.writeFileSync('button_mixins.js',fn);
-
 
 describe('btn-primary mixin',function(){
 

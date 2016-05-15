@@ -9,35 +9,35 @@ mixin input-simple(type,id,placeholder,label)
 	input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
 
 //- Checkbox - Block style
-mixin checkbox(text)
+mixin checkbox(text,name,id)
 	.checkbox
 		label
-			input(type="checkbox")
+			input(type="checkbox",name="#{name}",id="#{id}")
 			= text
 
 //- Checkbox - Inline style
-mixin checkbox-inline(text)
+mixin checkbox-inline(text,name,id)
 	.checkbox-inline
-		input(type="checkbox")
+                input(type="checkbox",name="#{name}",id="#{id}")
 		= text
 
 //- Radio box
-mixin radio(text)
+mixin radio(text,name,id)
 	.radio
 		label
-			input(type="radio")
+			input(type="radio",name="#{name}",id="#{id}")
 			= text
 
 //- Radio box - Inline style
-mixin radio-inline(text)
+mixin radio-inline(text,name,id)
 	.radio-inline
-		input(type="radio")
+		input(type="radio",name="#{name}",id="#{id}")
 		= text
 
 //- Submit button
-mixin submit(text)
+mixin submit(text,name,id)
 	.form-group
-		button.btn.btn-default(type="submit")= text
+		button.btn.btn-default(type="submit",name="#{name}",id="#{id}")= text
 
 //- Input group - both prepend and append options available, and block is passed
 mixin input-group(prepend,append)

@@ -30,7 +30,6 @@
   "devDependencies": {
     "jade": "^1.11.0",
     "jasmine": "^2.4.1",
-    "mocha": "^2.3.4",
-    "should": "^8.0.2"
+    "mocha": "^2.3.4"
   }
 }

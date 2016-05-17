@@ -131,7 +131,7 @@ mixin alert-ix-warning(message,icon)
 	+alert-ix("warning",message,icon)
 
 //- Alert danger		
-mixin alert-ix-danger(message)
+mixin alert-ix-danger(message,icon)
 	unless icon
 		- var icon = "remove-sign"
 	+alert-ix("danger",message,icon)

@@ -1,10 +1,10 @@
 {
   "name": "jade-bootstrap",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "Bootstrap framework written completely using mixins in JADE",
   "main": "_bootstrap.pug",
   "scripts": {
-    "test": "mocha -R spec" 
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
   "devDependencies": {
     "pug": "^2.0.0-alpha6",
     "jasmine": "^2.4.1",
-    "mocha": "^2.3.4",
-    "should": "^8.0.2"
+    "mocha": "^2.3.4"
   }
 }

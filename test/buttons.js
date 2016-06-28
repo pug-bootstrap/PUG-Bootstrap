@@ -1,18 +1,7 @@
 var assert = require('assert');
-var jade = require('jade');
+var pug = require('pug');
 var fs = require('fs');
 var path = require('path');
-
-// Write fixture data
-var mixins = ["btn-primary","btn-info","btn-warning","btn-danger","btn-success","btn-lg-primary","btn-lg-info","btn-lg-warning","btn-lg-danger","btn-lg-success" ];
-mixins.forEach(function(m) {
-    var fileTemplate = `include ../../../components/buttons
-+${m}(name)`;
-    var fileName = `${m}.jade`;
-    fs.writeFileSync(path.join(__dirname,"fixtures/buttons",fileName),fileTemplate);
-});
-
-
 
 var testData = [
     {

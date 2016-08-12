@@ -1,10 +1,16 @@
 //- panel
+//- panel
 mixin panel(type,title)
-	.panel(class="panel-#{type}")
-		.panel-heading
-			h3.panel-title= title
-		.panel-body
-			block
+  .panel(class="panel-#{type}")
+    if title !== undefined
+      .panel-heading
+        h3.panel-title= title
+      .panel-body
+        block
+    else
+      .panel-body
+        block
+
 
 //- panel-default
 mixin panel-default(title)

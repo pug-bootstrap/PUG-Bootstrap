@@ -14,7 +14,8 @@ mixin navbar(name, id, style, href)
 			a.navbar-brand(href=href)= name
 
 		.collapse.navbar-collapse( id=id )
-			block
+			ul.nav.navbar-nav
+				block
 
 
 mixin navbar-logo(name, id, style, href, image)
@@ -31,7 +32,8 @@ mixin navbar-logo(name, id, style, href, image)
 		img(alt=name, src=image)
 
 		.collapse.navbar-collapse( id=id )
-			block
+			ul.nav.navbar-nav
+				block
 
 
 mixin nav_item(href, active)

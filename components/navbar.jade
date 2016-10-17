@@ -14,9 +14,10 @@ mixin navbar(name, id, style, href)
 			a.navbar-brand(href=href)= name
 
 		.collapse.navbar-collapse( id=id )
-			block
+			ul.nav.navbar-nav
+				block
 
-  
+
 mixin navbar-logo(name, id, style, href, image)
 	- var style = (typeof style === 'undefined') ? "default" : style
 	- var href = (typeof style === 'undefined') ? "#" : href
@@ -28,10 +29,11 @@ mixin navbar-logo(name, id, style, href, image)
 				span.icon-bar
 				span.icon-bar
 			a.navbar-brand(href=href)
-        img(alt=name, src=image)
+		img(alt=name, src=image)
 
 		.collapse.navbar-collapse( id=id )
-			block
+			ul.nav.navbar-nav
+				block
 
 
 mixin nav_item(href, active)
@@ -64,7 +66,7 @@ mixin navbar-fixed(name,id,style)
 					span.icon-bar
 				a.navbar-brand(href='#')= name
 			.collapse.navbar-collapse( id=id )
-				    block
+					block
 
 mixin navbar-static(name,id,style)
 	- var style = (typeof style === 'undefined') ? "default" : style
@@ -78,5 +80,5 @@ mixin navbar-static(name,id,style)
 					span.icon-bar
 				a.navbar-brand(href='#')= name
 			.collapse.navbar-collapse( id=id )
-				    block
+					block
 //- End navbar mixins

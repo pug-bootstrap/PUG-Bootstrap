@@ -6,8 +6,8 @@ mixin input(type,id,placeholder,label,name)
         input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}",name="#{name}")
 
 //- Simple form input control without a form-group
-mixin input-simple(type,id,placeholder)
-    input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}")
+mixin input-simple(type,id,placeholder,name)
+    input.form-control(type="#{type}",id="#{id}",placeholder="#{placeholder}",name="#{name}")
 
 //- Checkbox - Block style
 mixin checkbox(text,name,id)

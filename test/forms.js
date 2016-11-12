@@ -10,7 +10,7 @@ describe("Forms", function() {
 
     it("should generate simple input control", function() {
         var fn = jade.compileFile(path.join(__dirname, "fixtures/forms","input-simple.jade"));
-        assert.equal('<input type="text" id="txtInput" placeholder="Placeholder" class="form-control"/>',fn({type: "text", id: "txtInput",placeholder:"Placeholder"}));
+        assert.equal('<input type="text" id="txtInput" placeholder="Placeholder" name="txtInput" class="form-control"/>',fn({type: "text", id: "txtInput",placeholder:"Placeholder", name: "txtInput"}));
     });
 
     it("should generate a checkbox",function() {

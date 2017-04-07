@@ -2,7 +2,7 @@
 mixin progress-bar(value,type)
 	-var type = type || ""
 	.progress
-		.progress-bar(class="progress-bar-#{type}",role='progressbar', aria-valuenow='#{value}', aria-valuemin='0', aria-valuemax='100', style='width: #{value}%;')
+		.progress-bar(class=`progress-bar-${type}`,role='progressbar', aria-valuenow=value, aria-valuemin='0', aria-valuemax='100', style=`width: ${value}%;`)
 			span.sr-only #{value}% Complete
 
 mixin progress-bar-success(value)

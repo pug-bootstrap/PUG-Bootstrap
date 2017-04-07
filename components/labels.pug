@@ -1,6 +1,6 @@
 //- Generic label
 mixin label(type,text)
-	span.label(class="label-#{type}")= text
+	span.label(class=`label-${type}`)= text
 
 //- Info label
 mixin label-default(text)

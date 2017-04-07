@@ -4,12 +4,12 @@
 include icons
 //- Generic Simple alert
 mixin alert(type,message)
-	.alert(role="alert",class="alert-#{type}")
+	.alert(role="alert",class=`alert-${type}`)
 		!= message
 
 //- Generic alert with icon
 mixin alert-i(type,message,icon)
-	.alert(role="alert",class="alert-#{type}")
+	.alert(role="alert",class=`alert-${type}`)
 		+icon(icon)
 		|  &nbsp;
 		= message
@@ -17,14 +17,14 @@ mixin alert-i(type,message,icon)
 		
 //- Generic alert with close button
 mixin alert-x(type,message)
-	.alert.alert-dismissible(role="alert",class="alert-#{type}")
+	.alert.alert-dismissible(role="alert",class=`alert-${type}`)
 		button.close(type="button",data-dismiss="alert" aria-label="Close")
 			span(aria-hidden="true")  &times;
 		= message
 		
 //- Generic alert with icon and close button
 mixin alert-ix(type,message,icon)
-	.alert.alert-dismissible(role="alert",class="alert-#{type}")
+	.alert.alert-dismissible(role="alert",class=`alert-${type}`)
 		+icon(icon)
 		button.close(type="button",data-dismiss="alert" aria-label="Close")
 			span(aria-hidden="true")  &times;

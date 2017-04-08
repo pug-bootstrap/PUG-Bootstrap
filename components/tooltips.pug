@@ -1,6 +1,6 @@
 //- tooltip
 mixin tooltip(text,tooltip,placement)
-	a(href="#",data-toggle="tooltip",data-placement="#{placement}",title="#{tooltip}")= text
+	a(href="#",data-toggle="tooltip",data-placement=placement,title=tooltip)= text
 
 //- tooltip-left
 mixin tooltip-left(text,tooltip)

@@ -1,6 +1,6 @@
 //- panel
 mixin panel(type,title)
-	.panel(class="panel-#{type}")
+	.panel(class=`panel-${type}`)
 		if title !== undefined
 			.panel-heading
 				h3.panel-title= title

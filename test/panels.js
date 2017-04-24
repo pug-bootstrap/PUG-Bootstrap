@@ -5,9 +5,22 @@ const path = require("path");
 
 describe("Panels",function() {
 
-    it("should generate a panel", function(){
-        const fn = pug.compileFile(path.join(__dirname, "fixtures/panels","panel.pug"));
-        assert.equal(1,1);
+    it("should generate a simple panel without title", function(){
+        const fn = pug.compileFile(path.join(__dirname, "fixtures/panels","simple-panel.pug"));
+        let locals = {
+            type: "default"
+        };
+
+        let markup = `<div class="panel panel-${locals.type}"><div class="panel-body">Simple panel</div></div>`;
+        assert.equal(markup,fn(locals));
+    });
+
+    it("should generate a default panel", function() {
+        const fn = pug.compileFile(path.join(__dirname, "fixtures/panels", "default-panel.pug"));
+        let locals = {
+            title: "Default Panel"
+        };
+        let markup = `<div class="panel panel-default"><div `
     });
 
 });

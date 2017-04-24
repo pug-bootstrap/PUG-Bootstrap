@@ -1,6 +1,6 @@
 {
   "name": "jade-bootstrap",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Bootstrap framework written completely using mixins in JADE",
   "main": "bootstrap.jade",
   "scripts": {

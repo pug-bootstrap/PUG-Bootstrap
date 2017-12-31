@@ -1,7 +1,7 @@
 # PUG-Bootstrap
 [Bootstrap](http://getbootstrap.com) framework written completely using mixins in [Pug](http://pugjs.org)
 
-[![Build Status](https://travis-ci.org/rajasegar/PUG-Bootstrap.svg?branch=master)](https://travis-ci.org/rajasegar/PUG-Bootstrap) 
+[![Build Status](https://travis-ci.org/rajasegar/JADE-Bootstrap.svg?branch=master)](https://travis-ci.org/rajasegar/JADE-Bootstrap) 
 [![npm](https://img.shields.io/npm/dm/jade-bootstrap.svg)](https://www.npmjs.com/package/jade-bootstrap)  
 [![npm version](http://img.shields.io/npm/v/jade-bootstrap.svg?style=flat)](https://npmjs.org/package/jade-bootstrap "View this project on npm")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)

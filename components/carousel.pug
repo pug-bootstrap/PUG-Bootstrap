@@ -11,14 +11,14 @@ mixin carousel-caption(item)
 
 //- carousel
 mixin carousel(id,items)
-	.carousel.slide(id="carousel-#{id}",data-ride="carousel")
+	.carousel.slide(id=`carousel-${id}`,data-ride="carousel")
 		//- Indicators
 		ol.carousel-indicators
 			each item,index in items
 				if(index === 0)
-					li.active(data-target="#carousel-#{id}", data-slide-to="#{index}")
+					li.active(data-target=`#carousel-${id}`, data-slide-to="#{index}")
 				else
-					li(data-target="#carousel-#{id}", data-slide-to="#{index}")
+					li(data-target=`#carousel-${id}`, data-slide-to="#{index}")
 
 
 		//- Wrapper for slides
@@ -35,9 +35,9 @@ mixin carousel(id,items)
 						+carousel-caption(item)
 
 		//-  Controls
-		a.left.carousel-control(href="#carousel-#{id}", role="button", data-slide="prev")
+		a.left.carousel-control(href=`#carousel-${id}`, role="button", data-slide="prev")
 			+icon("chevron-left")
 			span.sr-only Previous
-		a.right.carousel-control(href="#carousel-#{id}", role="button", data-slide="next")
+		a.right.carousel-control(href=`#carousel-${id}`, role="button", data-slide="next")
 			+icon("chevron-right")
 			span.sr-only Next

@@ -3,9 +3,9 @@
 
 include icons
 //- Generic Simple alert
-mixin alert(type,message)
+mixin alert(type)
   .alert(role="alert",class=`alert-${type}`)
-    != message
+    block
 
 //- Generic alert with icon
 mixin alert-i(type,message,icon)
@@ -136,9 +136,4 @@ mixin alert-ix-danger(message,icon)
     - var icon = "remove-sign"
       +alert-ix("danger",message,icon)
 
-        //- Alert blocks
 
-//- Generic Simple alert-block
-mixin alert-block(type)
-  .alert(role="alert",class=`alert-${type}`)
-    block

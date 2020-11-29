@@ -1,11 +1,10 @@
-//- alerts.pug
-//- alert mixins
+//- badges.pug
+//- badge mixins
 
-include icons
-//- Generic Simple alert
-mixin alert(type)
-  .alert(role="alert",class=`alert-${type}`)
-    block
+//- Generic Simple badge
+mixin badge(type,label)
+  span.badge(class='badge-' + type)
+    = label
 
 //- Generic alert with close button
 mixin alert-x(type)

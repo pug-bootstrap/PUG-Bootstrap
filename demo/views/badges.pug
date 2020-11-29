@@ -1,0 +1,20 @@
+extends layout
+include components/badges
+
+block content
+  h2 Badges - Simple
+  - var types = ['primary','secondary','success','danger','warning','info','light','dark']
+
+  h1 Example heading #[+badge('secondary','New')]
+  h2 Example heading #[+badge('secondary','New')]
+  h3 Example heading #[+badge('secondary','New')]
+  h4 Example heading #[+badge('secondary','New')]
+  h5 Example heading #[+badge('secondary','New')]
+  h6 Example heading #[+badge('secondary','New')]
+
+  button.btn.btn-primary(type="button") Notifications #[+badge('light',"4")]
+
+  h2 Contextual variations
+  each type in types
+    +badge(type,type)
+

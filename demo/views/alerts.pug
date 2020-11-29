@@ -1,0 +1,28 @@
+extends layout
+include components/alerts
+
+block content
+  h2 Alerts - Simple
+  - var alertTypes = ['primary','secondary','success','danger','warning','info','light','dark']
+
+  each alert_type in alertTypes
+    +alert(alert_type)
+      | A simple #{alert_type} primary alert -- check it out!
+
+  h2 Link Color
+  each alert_type in alertTypes
+    +alert(alert_type)
+      | A simple #{alert_type} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+
+  h2 Additional Content
+  +alert('success')
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+  h2 Dismissible alerts
+  each alert_type in alertTypes
+    +alert-x(alert_type)
+      | <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+

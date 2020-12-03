@@ -1,0 +1,27 @@
+extends layout
+include components/card
+
+block content
+  h2 Cards
+
+  +card()
+    img.card-img-top(src="...", alt="...")
+    .card-body
+      h5.card-title Card title
+      p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+      a.btn.btn-primary(href="#") Go somewhere
+
+  h2 Content types
+  h3 Body
+  +card()
+    .card-body
+      | This is some text within a card body.
+
+  h3 Titles, text and links
+  +card(style="width: 18rem;")
+    .card-body(style="width: 18rem;")
+      h5.card-title Card title
+      h6.card-subtitle.mb-2.text-muted Card subtitle
+      p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+      a.card-link(href="#") Card link
+      a.card-link(href="#") Another link

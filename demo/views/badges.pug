@@ -12,9 +12,17 @@ block content
   h5 Example heading #[+badge('secondary','New')]
   h6 Example heading #[+badge('secondary','New')]
 
+  p Badges can be used as part of links or buttons to provide a counter
   button.btn.btn-primary(type="button") Notifications #[+badge('light',"4")]
 
   h2 Contextual variations
   each type in types
     +badge(type,type)
 
+  h2 Pill badges
+  each type in types
+    +badge-pill(type, type)
+
+  h2 Links
+  each type in types
+    a.badge(href="#", class='badge-' + type) #{type}

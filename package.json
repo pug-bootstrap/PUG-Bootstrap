@@ -4,7 +4,8 @@
   "description": "Bootstrap framework written completely using mixins in JADE",
   "main": "bootstrap.jade",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "new-component": "./scripts/new-component.sh $1"
   },
   "repository": {
     "type": "git",

@@ -23,12 +23,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/accordion', (req, res) => {
+  res.render('accordion');
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/alerts', alertsRouter);
 app.use('/badges', badgesRouter);
 app.use('/breadcrumb', breadcrumbRouter);
 app.use('/card', cardRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

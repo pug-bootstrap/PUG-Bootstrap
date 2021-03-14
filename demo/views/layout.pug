@@ -16,17 +16,7 @@ html
     </nav>
     .container-fluid
       .row
-        nav.col-md-3.col-lg-2.d-md.block.bg-light.sidebar
-          .sidebar-sticky.pt-3
-            ul.nav.flex-column
-              li.nav-item
-                a.nav-link(href="/alerts") Alerts
-              li.nav-item
-                a.nav-link(href="/badges") Badges
-              li.nav-item
-                a.nav-link(href="/breadcrumb") Breadcrumb
-              li.nav-item
-                a.nav-link(href="/card") Cards
+        include includes/sidebar.pug
         main.col-md-9.ml-sm-auto.col-lg-10.px-md-4
           block content
     block scripts

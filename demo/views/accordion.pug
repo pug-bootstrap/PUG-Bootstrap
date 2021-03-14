@@ -1,0 +1,12 @@
+extends layout
+include components/accordion
+
+block content
+  h2 Accordion
+  +accordion("sample")
+    +accordion-item("Title1","sample","true")
+      |  This is first accordion content
+    +accordion-item("Title2","sample")
+      |  This is second accordion content
+    +accordion-item("Title3","sample")
+      |  This is third accordion content

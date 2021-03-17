@@ -33,6 +33,7 @@ app.use('/alerts', alertsRouter);
 app.use('/badges', badgesRouter);
 app.use('/breadcrumb', breadcrumbRouter);
 app.use('/card', cardRouter);
+app.use('/buttons', (req, res) => res.render('buttons', { title: 'pug-bootstrap : Buttons' }));
 
 
 // catch 404 and forward to error handler

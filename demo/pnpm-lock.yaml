@@ -7,7 +7,7 @@ dependencies:
   pug: 2.0.0-beta11
 devDependencies:
   nodemon: 2.0.7
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@sindresorhus/is/0.14.0:
     dev: true

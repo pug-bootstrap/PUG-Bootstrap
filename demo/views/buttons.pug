@@ -1,0 +1,44 @@
+extends layout
+include components/buttons
+
+block content
+  h2 Buttons - Simple
+  - var buttonTypes = ['primary','secondary','success','danger','warning','info','light','dark']
+
+  .bd-example
+    each bt in buttonTypes
+      +btn(bt) #{bt}
+
+  .prism
+    pre
+      code.language-pug
+        | +btn-primary() Primary
+        | +btn-secondary() Secondary
+        | +btn-success() Success
+        | +btn-danger() Danger
+        | +btn-warning() Warning
+        | +btn-info() Info
+        | +btn-light() Light
+        | +btn-dark() Dark
+
+  .bd-example
+    +btn-primary()(aria-label="primary") Primary
+    +btn-secondary() Secondary
+    +btn-success() Success
+    +btn-danger() Danger
+    +btn-warning() Warning
+    +btn-info() Info
+    +btn-light() Light
+    +btn-dark() Dark
+
+  .prism
+    pre
+      code.language-pug
+        | +btn-primary() Primary
+        | +btn-secondary() Secondary
+        | +btn-success() Success
+        | +btn-danger() Danger
+        | +btn-warning() Warning
+        | +btn-info() Info
+        | +btn-light() Light
+        | +btn-dark() Dark

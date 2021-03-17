@@ -4,7 +4,7 @@ include components/card
 block content
   h2 Cards
 
-  +card()
+  +card("width: 18rem;")
     img.card-img-top(src="https://picsum.photos/200/300", alt="...")
     .card-body
       h5.card-title Card title
@@ -18,8 +18,8 @@ block content
       | This is some text within a card body.
 
   h3 Titles, text and links
-  +card(style="width: 18rem;")
-    .card-body(style="width: 18rem;")
+  +card("width: 18rem;")
+    .card-body()
       h5.card-title Card title
       h6.card-subtitle.mb-2.text-muted Card subtitle
       p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.

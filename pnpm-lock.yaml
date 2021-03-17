@@ -2,7 +2,7 @@ devDependencies:
   jasmine: 2.99.0
   mocha: 2.5.3
   pug: 2.0.4
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@types/babel-types/7.0.9:
     dev: true

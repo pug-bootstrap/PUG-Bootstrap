@@ -1,0 +1,10 @@
+.bd-example > .btn, 
+.bd-example > .btn-group {
+    margin: .25rem .125rem;
+}
+
+.prism {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+}

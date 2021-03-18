@@ -1,28 +1,28 @@
 # PUG-Bootstrap
 [Bootstrap](http://getbootstrap.com) framework written completely using mixins in [Pug](http://pugjs.org)
 
-[![Build Status](https://travis-ci.org/rajasegar/JADE-Bootstrap.svg?branch=master)](https://travis-ci.org/rajasegar/JADE-Bootstrap) 
+[![Build Status](https://travis-ci.org/pug-bootstrap/JADE-Bootstrap.svg?branch=master)](https://travis-ci.org/pug-bootstrap/JADE-Bootstrap) 
 [![npm](https://img.shields.io/npm/dm/jade-bootstrap.svg)](https://www.npmjs.com/package/jade-bootstrap)  
 [![npm version](http://img.shields.io/npm/v/jade-bootstrap.svg?style=flat)](https://npmjs.org/package/jade-bootstrap "View this project on npm")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 ## Website
-[PUG-Bootstrap](http://rajasegar.github.io/PUG-Bootstrap/) 
+[PUG-Bootstrap](http://pug-bootstrap.github.io/PUG-Bootstrap/) 
 
 ## Documentation
-[Documentation](http://rajasegar.github.io/PUG-Bootstrap/) 
+[Documentation](http://pug-bootstrap.github.io/PUG-Bootstrap/) 
 
 ## Wiki
-Go to [wiki](http://rajasegar.github.io/PUG-Bootstrap/) page
+Go to [wiki](http://pug-bootstrap.github.io/PUG-Bootstrap/) page
 
 ## Quickstart
   Several quick start options are available:
-  * [Download the latest release] (https://github.com/rajasegar/PUG-Bootstrap/archive/master.zip)
-  * Clone the repo: `git clone https://github.com/rajasegar/PUG-Bootstrap.git`.
+  * [Download the latest release] (https://github.com/pug-bootstrap/PUG-Bootstrap/archive/master.zip)
+  * Clone the repo: `git clone https://github.com/pug-bootstrap/PUG-Bootstrap.git`.
   * Install with [Bower](http://bower.io/): `bower install jade-bootstrap`.
   * Install with [npm](https://www.npmjs.com/): `npm install jade-bootstrap`.
 
-The quickest way to get started for NodeJS applications is with this [boilerplate](https://github.com/rajasegar/jadebootstrap-seed)
+The quickest way to get started for NodeJS applications is with this [boilerplate](https://github.com/pug-bootstrap/jadebootstrap-seed)
 
 ### What's included
 
